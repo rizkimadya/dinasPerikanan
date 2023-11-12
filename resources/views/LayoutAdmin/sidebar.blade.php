@@ -5,11 +5,8 @@
     <!--begin::Logo-->
     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
         <!--begin::Logo image-->
-        <a href="../../demo1/dist/index.html">
-            <img alt="Logo" src="{{ asset('assets2/media/logos/default-dark.svg') }}"
-                class="h-25px app-sidebar-logo-default" />
-            <img alt="Logo" src="{{ asset('assets2/media/logos/default-small.svg') }}"
-                class="h-20px app-sidebar-logo-minimize" />
+        <a href="{{ url('/dashboard-admin') }}" class="text-white">
+            Content Management System <br> <span class="text-gray-600">Dinas Kelautan & Perikanan</span>
         </a>
         <!--end::Logo image-->
         <!--begin::Sidebar toggle-->
@@ -73,74 +70,124 @@
                             <span class="menu-title">MENU</span>
                             <span class="menu-arrow d-lg-none"></span>
                         </span>
-                        <a class="menu-link mb-2 {{ $title == 'Produk' ? 'active' : '' }}"
-                            href="{{ url('/admin/produk') }}">
-                            <span class="menu-icon">
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                <span class="svg-icon svg-icon-3">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.3"
-                                            d="M18.041 22.041C18.5932 22.041 19.041 21.5932 19.041 21.041C19.041 20.4887 18.5932 20.041 18.041 20.041C17.4887 20.041 17.041 20.4887 17.041 21.041C17.041 21.5932 17.4887 22.041 18.041 22.041Z"
-                                            fill="currentColor" />
-                                        <path opacity="0.3"
-                                            d="M6.04095 22.041C6.59324 22.041 7.04095 21.5932 7.04095 21.041C7.04095 20.4887 6.59324 20.041 6.04095 20.041C5.48867 20.041 5.04095 20.4887 5.04095 21.041C5.04095 21.5932 5.48867 22.041 6.04095 22.041Z"
-                                            fill="currentColor" />
-                                        <path opacity="0.3"
-                                            d="M7.04095 16.041L19.1409 15.1409C19.7409 15.1409 20.141 14.7409 20.341 14.1409L21.7409 8.34094C21.9409 7.64094 21.4409 7.04095 20.7409 7.04095H5.44095L7.04095 16.041Z"
-                                            fill="currentColor" />
-                                        <path
-                                            d="M19.041 20.041H5.04096C4.74096 20.041 4.34095 19.841 4.14095 19.541C3.94095 19.241 3.94095 18.841 4.14095 18.541L6.04096 14.841L4.14095 4.64095L2.54096 3.84096C2.04096 3.64096 1.84095 3.04097 2.14095 2.54097C2.34095 2.04097 2.94096 1.84095 3.44096 2.14095L5.44096 3.14095C5.74096 3.24095 5.94096 3.54096 5.94096 3.84096L7.94096 14.841C7.94096 15.041 7.94095 15.241 7.84095 15.441L6.54096 18.041H19.041C19.641 18.041 20.041 18.441 20.041 19.041C20.041 19.641 19.641 20.041 19.041 20.041Z"
-                                            fill="currentColor" />
-                                    </svg>
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion here show">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z"
+                                                fill="currentColor" />
+                                            <path opacity="0.3"
+                                                d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
                                 </span>
-                                <!--end::Svg Icon-->
+                                <span class="menu-title">Beranda</span>
+                                <span class="menu-arrow"></span>
                             </span>
-                            <span class="menu-title">Produk</span>
-                        </a>
-                        <a class="menu-link mb-2 {{ $title == 'Blog' ? 'active' : '' }}"
-                            href="{{ url('/admin/blog') }}">
-                            <span class="menu-icon">
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                <span class="svg-icon svg-icon-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z"
-                                            fill="currentColor" />
-                                        <path opacity="0.3"
-                                            d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z"
-                                            fill="currentColor" />
-                                    </svg>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Berita</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z"
+                                                fill="currentColor" />
+                                            <path opacity="0.3"
+                                                d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
                                 </span>
-                                <!--end::Svg Icon-->
+                                <span class="menu-title">Profil</span>
+                                <span class="menu-arrow"></span>
                             </span>
-                            <span class="menu-title">Blog</span>
-                        </a>
-                        <a class="menu-link mb-2 {{ $title == 'Testimoni' ? 'active' : '' }}"
-                            href="{{ url('/admin/testimoni') }}">
-                            <span class="menu-icon">
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                <span class="svg-icon svg-icon-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.3"
-                                            d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19Z"
-                                            fill="currentColor" />
-                                        <path
-                                            d="M21 5H2.99999C2.69999 5 2.49999 5.10005 2.29999 5.30005L11.2 13.3C11.7 13.7 12.4 13.7 12.8 13.3L21.7 5.30005C21.5 5.10005 21.3 5 21 5Z"
-                                            fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->
-                            </span>
-                            <span class="menu-title">Testimoni</span>
-                        </a>
-
-                        <span class="menu-link mt-5">
-                            <span class="menu-title">FORM</span>
-                            <span class="menu-arrow d-lg-none"></span>
-                        </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Profil Kami</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Maksud & Tujuan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Tugas & Fungsi</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Maklumat Pelayanan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Tentang Kami</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
                         <a class="menu-link mb-2 {{ $title == 'Komentar' ? 'active' : '' }}"
                             href="{{ url('/admin/komentar') }}">
                             <span class="menu-icon">
@@ -159,8 +206,120 @@
                                 </span>
                                 <!--end::Svg Icon-->
                             </span>
-                            <span class="menu-title">Komentar</span>
+                            <span class="menu-title">Informasi Public</span>
                         </a>
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z"
+                                                fill="currentColor" />
+                                            <path opacity="0.3"
+                                                d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-title">PPID</span>
+                                <span class="menu-arrow"></span>
+                            </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Visi Misi</span>
+                                    </a>
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Tugas & Fungsi</span>
+                                    </a>
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Maklumat</span>
+                                    </a>
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Hak & Kewajiban</span>
+                                    </a>
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Tentang PPID</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z"
+                                                fill="currentColor" />
+                                            <path opacity="0.3"
+                                                d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-title">Dokumentasi</span>
+                                <span class="menu-arrow"></span>
+                            </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Album Kegiatan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Video</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
                         <a class="menu-link mb-2 {{ $title == 'Bantuan' ? 'active' : '' }}"
                             href="{{ url('/admin/bantuan') }}">
                             <span class="menu-icon">
@@ -178,8 +337,57 @@
                                 </span>
                                 <!--end::Svg Icon-->
                             </span>
-                            <span class="menu-title">Bantuan</span>
+                            <span class="menu-title">Pengumuman</span>
                         </a>
+                         <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z"
+                                                fill="currentColor" />
+                                            <path opacity="0.3"
+                                                d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-title">Layanan</span>
+                                <span class="menu-arrow"></span>
+                            </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Data Pengaduan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link actives" href="#">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Survei Kepuasan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
                         <!--end:Menu link-->
                     </div>
                 </div>

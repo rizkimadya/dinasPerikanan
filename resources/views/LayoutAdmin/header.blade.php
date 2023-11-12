@@ -22,7 +22,7 @@
         <!--begin::Mobile logo-->
         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
             <a href="../../demo1/dist/index.html" class="d-lg-none">
-                <img alt="Logo" src="{{ asset('assets2/media/logos/default-small.svg') }}" class="h-30px" />
+                <img alt="Logo" src="{{ asset('assets2/img/logo_sulsel.png') }}" class="h-30px" />
             </a>
         </div>
         <!--end::Mobile logo-->
@@ -234,7 +234,7 @@
                                     <div class="fw-bold d-flex align-items-center fs-5">Admin
                                         {{-- <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span> --}}
                                     </div>
-                                    <p class="fw-semibold text-muted fs-7">Dinas Pendidikan & Perikanan</p>
+                                    <p class="fw-semibold text-muted fs-7">Dinas Kelautan & Perikanan</p>
                                 </div>
                                 <!--end::Username-->
                             </div>

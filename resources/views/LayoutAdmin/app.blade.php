@@ -119,7 +119,7 @@
                                         {{ $title }}</h1>
                                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                                         <!--begin Item-->
-                                        <li class="breadcrumb-item text-muted">Dinas Perikanan & Kelautan</li>
+                                        <li class="breadcrumb-item text-muted">Dinas Kelautan & Perikanan </li>
                                         <!--end Item-->
                                     </ul>
                                 </div>
