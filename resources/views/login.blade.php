@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-    <link rel="shortcut icon" href="{{ asset('assets2/media/logos/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets2/img/logo_sulsel.png') }}" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -117,7 +117,8 @@
                     <!--end::Image-->
                     <!--begin::Title-->
                     <h1 style="color:#151521;" class="fs-2qx fw-bolder text-center mb-7">Dinas Kelautan dan Perikanan
-                        <br> Provinsi Sulawesi Selatan</h1>
+                        <br> Provinsi Sulawesi Selatan
+                    </h1>
                     <!--end::Title-->
 
                     <!--end::Text-->

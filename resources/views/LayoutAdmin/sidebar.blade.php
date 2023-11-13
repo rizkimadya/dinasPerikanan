@@ -98,7 +98,8 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link {{ $title == 'Berita' ? 'active' : '' }}" href="{{ url('/admin/berita') }}">
+                                    <a class="menu-link {{ $title == 'Berita' ? 'active' : '' }}"
+                                        href="{{ url('/admin/berita') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -110,7 +111,8 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion  {{ $title == 'Profil Kami' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -137,7 +139,8 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link  {{ $title == 'Profil Kami' ? 'active' : '' }}"
+                                        href="{{ url('/admin/profilKami') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -272,7 +275,8 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion {{ $title == 'Album Kegiatan' ? 'here show' : '' }} {{ $title == 'Video Kegiatan' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -299,7 +303,8 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Album Kegiatan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/album') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -309,7 +314,8 @@
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Video Kegiatan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/video') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
