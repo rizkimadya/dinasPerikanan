@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PpidController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfilKamiController;
 use App\Http\Controllers\SurveiController;
@@ -60,6 +61,26 @@ Route::group(['middleware' => 'auth'], function () {
     // tentang kami
     Route::get('/admin/tentangKami', [ProfilController::class, 'tentangKami']);
     Route::post('/admin/tentangKami', [ProfilController::class, 'storeOrUpdateTentangKami']);
+
+    // visi misi
+    Route::get('/admin/visiMisi', [PpidController::class, 'visiMisi']);
+    Route::post('/admin/visiMisi', [PpidController::class, 'storeOrUpdateVisiMisi']);
+
+    // tugas fungsi
+    Route::get('/admin/tugasFungsiPpid', [PpidController::class, 'tugasFungsi']);
+    Route::post('/admin/tugasFungsiPpid', [PpidController::class, 'storeOrUpdateTugasFungsi']);
+
+    // maklumat pelayanan
+    Route::get('/admin/maklumat', [PpidController::class, 'maklumat']);
+    Route::post('/admin/maklumat', [PpidController::class, 'storeOrUpdateMaklumat']);
+
+    // hak kewajiban
+    Route::get('/admin/hakKewajiban', [PpidController::class, 'hakKewajiban']);
+    Route::post('/admin/hakKewajiban', [PpidController::class, 'storeOrUpdateHakKewajiban']);
+
+    // tentang 
+    Route::get('/admin/tentang', [PpidController::class, 'tentang']);
+    Route::post('/admin/tentang', [PpidController::class, 'storeOrUpdateTentang']);
 
     // pengumuman
     Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);

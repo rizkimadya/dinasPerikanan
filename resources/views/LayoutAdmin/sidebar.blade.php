@@ -216,7 +216,8 @@
                             </span>
                             <span class="menu-title">Informasi Public</span>
                         </a>
-                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion {{ $title == 'Visi Misi PPID' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi PPID' ? 'here show' : '' }} {{ $title == 'Maklumat PPID' ? 'here show' : '' }} {{ $title == 'Hak & Kewajiban' ? 'here show' : '' }} {{ $title == 'Tentang PPID' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -243,31 +244,36 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Visi Misi PPID' ? 'active' : '' }}"
+                                        href="{{ url('/admin/visiMisi') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Visi Misi</span>
                                     </a>
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Tugas & Fungsi PPID' ? 'active' : '' }} "
+                                        href="{{ url('/admin/tugasFungsiPpid') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Tugas & Fungsi</span>
                                     </a>
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Maklumat PPID' ? 'active' : '' }}"
+                                        href="{{ url('/admin/maklumat') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Maklumat</span>
                                     </a>
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Hak & Kewajiban' ? 'active' : '' }}"
+                                        href="{{ url('/admin/hakKewajiban') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Hak & Kewajiban</span>
                                     </a>
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Tentang PPID' ? 'active' : '' }}"
+                                        href="{{ url('/admin/tentang') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
