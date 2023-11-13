@@ -1,14 +1,14 @@
-@extends('LayoutAdmin.app', ['title' => 'Profil Kami'])
+@extends('LayoutAdmin.app', ['title' => 'Maksud & Tujuan'])
 
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card table-responsive p-md-4 p-3">
-                <form action="{{ url('/admin/profilKami') }}" method="POST">
+                <form action="{{ url('/admin/maksudTujuan') }}" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label for="isi" class="form-label mb-2">Masukkan Isi Data Profil Kami</label>
-                        <textarea name="isi" id="editor" style="height: 100%; color:#000;">{{ optional($profilKami)->isi ?? '' }}</textarea>
+                        <label for="isi" class="form-label mb-2">Masukkan Isi Data Maksud & Tujuan</label>
+                        <textarea name="isi" id="editor" style="height: 100%; color:#000;">{{ optional($maksudTujuan)->isi ?? '' }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary mx-auto d-block">Simpan</button>
                 </form>

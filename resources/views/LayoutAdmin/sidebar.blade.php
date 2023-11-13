@@ -112,7 +112,7 @@
                             <!--end:Menu sub-->
                         </div>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion  {{ $title == 'Profil Kami' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Maksud & Tujuan' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Tentang Kami' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -139,7 +139,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link  {{ $title == 'Profil Kami' ? 'active' : '' }}"
+                                    <a class="menu-link {{ $title == 'Profil Kami' ? 'active' : '' }}"
                                         href="{{ url('/admin/profilKami') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
@@ -150,7 +150,8 @@
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Maksud & Tujuan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/maksudTujuan') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -160,7 +161,8 @@
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Tugas & Fungsi' ? 'active' : '' }}"
+                                        href="{{ url('/admin/tugasFungsi') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -170,7 +172,8 @@
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Maklumat Pelayanan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/maklumatPelayanan') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -180,7 +183,8 @@
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Tentang Kami' ? 'active' : '' }}"
+                                        href="{{ url('/admin/tentangKami') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -374,7 +378,8 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link {{ $title == 'Pengaduan' ? 'active' : '' }}" href="{{ url('/admin/pengaduan') }}">
+                                    <a class="menu-link {{ $title == 'Pengaduan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/pengaduan') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -384,7 +389,8 @@
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link {{ $title == 'Survei Kepuasan' ? 'active' : '' }}" href="{{ url('/admin/survei') }}">
+                                    <a class="menu-link {{ $title == 'Survei Kepuasan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>

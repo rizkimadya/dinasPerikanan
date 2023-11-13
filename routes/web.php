@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfilKamiController;
 use App\Http\Controllers\SurveiController;
 use App\Http\Controllers\VideoKegiatanController;
@@ -41,7 +42,24 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/berita/delete/{id}', [BeritaController::class, 'destroy']);
 
     // profil kami
-    Route::get('/admin/profilKami', [ProfilKamiController::class, 'index']);
+    Route::get('/admin/profilKami', [ProfilController::class, 'profilKami']);
+    Route::post('/admin/profilKami', [ProfilController::class, 'storeOrUpdateProfilKami']);
+
+    // maksud & tujuan
+    Route::get('/admin/maksudTujuan', [ProfilController::class, 'maksudTujuan']);
+    Route::post('/admin/maksudTujuan', [ProfilController::class, 'storeOrUpdateMaksudTujuan']);
+
+    // maksud & tujuan
+    Route::get('/admin/tugasFungsi', [ProfilController::class, 'tugasFungsi']);
+    Route::post('/admin/tugasFungsi', [ProfilController::class, 'storeOrUpdateTugasFungsi']);
+
+    // maklumat pelayanan
+    Route::get('/admin/maklumatPelayanan', [ProfilController::class, 'maklumatPelayanan']);
+    Route::post('/admin/maklumatPelayanan', [ProfilController::class, 'storeOrUpdateMaklumatPelayanan']);
+
+    // tentang kami
+    Route::get('/admin/tentangKami', [ProfilController::class, 'tentangKami']);
+    Route::post('/admin/tentangKami', [ProfilController::class, 'storeOrUpdateTentangKami']);
 
     // pengumuman
     Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);
