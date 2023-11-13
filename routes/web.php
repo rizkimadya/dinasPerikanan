@@ -4,8 +4,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AlbumKegiatanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfilKamiController;
+use App\Http\Controllers\SurveiController;
 use App\Http\Controllers\VideoKegiatanController;
 use Illuminate\Support\Facades\Route;
 
@@ -64,4 +66,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/video/edit/{id}', [VideoKegiatanController::class, 'edit']);
     Route::post('/admin/video/update/{id}', [VideoKegiatanController::class, 'update']);
     Route::get('/admin/video/delete/{id}', [VideoKegiatanController::class, 'destroy']);
+
+    // pengaduan
+    Route::get('/admin/pengaduan', [PengaduanController::class, 'index']);
+    Route::get('/admin/pengaduan', [PengaduanController::class, 'index']);
+    Route::post('/admin/pengaduan', [PengaduanController::class, 'store']);
+    Route::get('/admin/pengaduan/edit/{id}', [PengaduanController::class, 'edit']);
+    Route::post('/admin/pengaduan/update/{id}', [PengaduanController::class, 'update']);
+    Route::get('/admin/pengaduan/delete/{id}', [PengaduanController::class, 'destroy']);
+
+    // survei
+    Route::get('/admin/survei', [SurveiController::class, 'index']);
+    Route::get('/admin/survei', [SurveiController::class, 'index']);
+    Route::post('/admin/survei', [SurveiController::class, 'store']);
+    Route::get('/admin/survei/edit/{id}', [SurveiController::class, 'edit']);
+    Route::post('/admin/survei/update/{id}', [SurveiController::class, 'update']);
+    Route::get('/admin/survei/delete/{id}', [SurveiController::class, 'destroy']);
 });
