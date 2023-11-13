@@ -70,7 +70,8 @@
                             <span class="menu-title">MENU</span>
                             <span class="menu-arrow d-lg-none"></span>
                         </span>
-                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion here show">
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion {{ $title == 'Berita' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -97,7 +98,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link actives" href="#">
+                                    <a class="menu-link {{ $title == 'Berita' ? 'active' : '' }}" href="{{ url('/admin/berita') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -339,7 +340,7 @@
                             </span>
                             <span class="menu-title">Pengumuman</span>
                         </a>
-                         <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
