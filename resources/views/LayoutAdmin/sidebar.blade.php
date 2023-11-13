@@ -192,7 +192,7 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <a class="menu-link mb-2 {{ $title == 'Komentar' ? 'active' : '' }}"
+                        <a class="menu-link {{ $title == 'Komentar' ? 'active' : '' }}"
                             href="{{ url('/admin/komentar') }}">
                             <span class="menu-icon">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -327,8 +327,8 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <a class="menu-link mb-2 {{ $title == 'Bantuan' ? 'active' : '' }}"
-                            href="{{ url('/admin/bantuan') }}">
+                        <a class="menu-link {{ $title == 'Pengumuman' ? 'active' : '' }}"
+                            href="{{ url('/admin/pengumuman') }}">
                             <span class="menu-icon">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
                                 <span class="svg-icon svg-icon-3">

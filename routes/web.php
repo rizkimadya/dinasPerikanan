@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AlbumKegiatanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfilKamiController;
 use App\Http\Controllers\VideoKegiatanController;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     // profil kami
     Route::get('/admin/profilKami', [ProfilKamiController::class, 'index']);
+
+    // pengumuman
+    Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);
+    Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);
+    Route::post('/admin/pengumuman', [PengumumanController::class, 'store']);
+    Route::get('/admin/pengumuman/edit/{id}', [PengumumanController::class, 'edit']);
+    Route::post('/admin/pengumuman/update/{id}', [PengumumanController::class, 'update']);
+    Route::get('/admin/pengumuman/delete/{id}', [PengumumanController::class, 'destroy']);
 
     // album
     Route::get('/admin/album', [AlbumKegiatanController::class, 'index']);

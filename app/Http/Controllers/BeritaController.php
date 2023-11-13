@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $berita = Berita::all();
