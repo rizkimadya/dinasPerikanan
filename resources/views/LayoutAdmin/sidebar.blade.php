@@ -206,26 +206,6 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <a class="menu-link {{ $title == 'Komentar' ? 'active' : '' }}"
-                            href="{{ url('/admin/komentar') }}">
-                            <span class="menu-icon">
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                <span class="svg-icon svg-icon-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.3"
-                                            d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z"
-                                            fill="currentColor" />
-                                        <rect x="6" y="12" width="7" height="2" rx="1"
-                                            fill="currentColor" />
-                                        <rect x="6" y="7" width="12" height="2" rx="1"
-                                            fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->
-                            </span>
-                            <span class="menu-title">Informasi Public</span>
-                        </a>
                         <div data-kt-menu-trigger="click"
                             class="menu-item menu-accordion {{ $title == 'Visi Misi PPID' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi PPID' ? 'here show' : '' }} {{ $title == 'Maklumat PPID' ? 'here show' : '' }} {{ $title == 'Hak & Kewajiban' ? 'here show' : '' }} {{ $title == 'Tentang PPID' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
@@ -418,6 +398,346 @@
                             <!--end:Menu sub-->
                         </div>
                         <!--end:Menu link-->
+
+                        <span class="menu-link mt-5">
+                            <span class="menu-title">INFORMASI PUBLIC</span>
+                            <span class="menu-arrow d-lg-none"></span>
+                        </span>
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion {{ $title == 'RPMJD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }}">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.3"
+                                                d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z"
+                                                fill="currentColor" />
+                                            <rect x="6" y="12" width="7" height="2" rx="1"
+                                                fill="currentColor" />
+                                            <rect x="6" y="7" width="12" height="2" rx="1"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-title"> Berkala</span>
+                                <span class="menu-arrow"></span>
+                            </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'RPJMD' ? 'active' : '' }}"
+                                        href="{{ url('/admin/pengaduan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">RPJMD (Rencana Pembangunan Daerah Jangka
+                                            Menengah)</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Renstra (Rencana Strategis)' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Renstra (Rencana Strategis)</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Renja (Rencana Kerja)' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Renja (Rencana Kerja)</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">KUA (Kebijakan Umum APBD)</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion {{ $title == 'Standar Operasional Prosedur' ? 'here show' : '' }} {{ $title == 'Tata Cara Permohonan Informasi' ? 'here show' : '' }} {{ $title == 'Formulir Permohonan Informasi' ? 'here show' : '' }} {{ $title == 'Daftar Informasi' ? 'here show' : '' }}">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.3"
+                                                d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z"
+                                                fill="currentColor" />
+                                            <rect x="6" y="12" width="7" height="2" rx="1"
+                                                fill="currentColor" />
+                                            <rect x="6" y="7" width="12" height="2" rx="1"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-title"> Serta Merta</span>
+                                <span class="menu-arrow"></span>
+                            </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Standar Operasional Prosedur' ? 'active' : '' }}"
+                                        href="{{ url('/admin/pengaduan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Standar Operasional Prosedur</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Tata Cara Permohonan Informasi' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Tata Cara Permohonan Informasi</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Formulir Permohonan Informasi' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Formulir Permohonan Informasi</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Daftar Informasi' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Daftar Informasi</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
+                        <div data-kt-menu-trigger="click"
+                            class="menu-item menu-accordion {{ $title == 'Undang-Undang' ? 'here show' : '' }} {{ $title == 'Peraturan Pemerintah' ? 'here show' : '' }} {{ $title == 'Peraturan Presiden' ? 'here show' : '' }} {{ $title == 'Peraturan Mentri' ? 'here show' : '' }} {{ $title == 'Keputusan Mentri' ? 'here show' : '' }} {{ $title == 'Peraturan Daerah' ? 'here show' : '' }} {{ $title == 'Peraturan Gubernur' ? 'here show' : '' }} {{ $title == 'Keputusan Gubernur' ? 'here show' : '' }} {{ $title == 'Instruktur Gubernur' ? 'here show' : '' }} {{ $title == 'Keputusan Sekretaris Daerah' ? 'here show' : '' }} {{ $title == 'Keputusan Kepala Dinas' ? 'here show' : '' }} {{ $title == 'Surat Edaran' ? 'here show' : '' }}">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: icons/duotune/abstract/abs029.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.3"
+                                                d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z"
+                                                fill="currentColor" />
+                                            <rect x="6" y="12" width="7" height="2" rx="1"
+                                                fill="currentColor" />
+                                            <rect x="6" y="7" width="12" height="2" rx="1"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-title"> Sedia Setiap Saat</span>
+                                <span class="menu-arrow"></span>
+                            </span>
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Undang-Undang' ? 'active' : '' }}"
+                                        href="{{ url('/admin/pengaduan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Undang-Undang</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Peraturan Pemerintah' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Peraturan Pemerintah</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Peraturan Presiden' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Peraturan Presiden</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Peraturan Mentri' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Peraturan Mentri</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Keputusan Mentri' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Keputusan Mentri</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Peraturan Daerah' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Peraturan Daerah</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Peraturan Gubernur' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Peraturan Gubernur</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Keputusan Gubernur' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Keputusan Gubernur</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Instruktur Gubernur' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Instruktur Gubernur</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Keputusan Sekretaris Daerah' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Keputusan Sekretaris Daerah</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Keputusan Kepala Dinas' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Keputusan Kepala Dinas</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Surat Edaran' ? 'active' : '' }}"
+                                        href="{{ url('/admin/survei') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Surat Edaran</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
                     </div>
                 </div>
 
