@@ -112,7 +112,7 @@
                             <!--end:Menu sub-->
                         </div>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Maksud & Tujuan' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Tentang Kami' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion  {{ $title == 'Profil Pejabat' ? 'here show' : '' }} {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Maksud & Tujuan' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Tentang Kami' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -136,6 +136,17 @@
                             <!--begin:Menu sub-->
                             <div class="menu-sub menu-sub-accordion">
                                 <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Profil Pejabat' ? 'active' : '' }}"
+                                        href="{{ url('/admin/pejabat') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Profil Pejabat</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Profil Kami' ? 'active' : '' }}"

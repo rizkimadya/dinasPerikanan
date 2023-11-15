@@ -4,12 +4,14 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AlbumKegiatanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\PejabatController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PpidController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfilKamiController;
 use App\Http\Controllers\SurveiController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoKegiatanController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +25,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// user
+Route::get('/', [UserController::class, 'beranda']);
 
 // authentication
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -41,6 +46,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/berita/edit/{id}', [BeritaController::class, 'edit']);
     Route::post('/admin/berita/update/{id}', [BeritaController::class, 'update']);
     Route::get('/admin/berita/delete/{id}', [BeritaController::class, 'destroy']);
+
+    // pejabat
+    Route::get('/admin/pejabat', [PejabatController::class, 'index']);
+    Route::get('/admin/pejabat', [PejabatController::class, 'index']);
+    Route::post('/admin/pejabat', [PejabatController::class, 'store']);
+    Route::get('/admin/pejabat/edit/{id}', [PejabatController::class, 'edit']);
+    Route::post('/admin/pejabat/update/{id}', [PejabatController::class, 'update']);
+    Route::get('/admin/pejabat/delete/{id}', [PejabatController::class, 'destroy']);
 
     // profil kami
     Route::get('/admin/profilKami', [ProfilController::class, 'profilKami']);

@@ -43,12 +43,12 @@
                     <!--begin::Wrapper-->
                     <div class="w-lg-500px p-md-10 p-0">
                         <!--begin::Form-->
-                        <div class="text-center mb-11">
+                        <div class="text-center">
                             <!--begin::Title-->
                             <h1 class="text-dark fw-bolder mb-3">Halaman Login</h1>
                             <!--end::Title-->
                             <!--begin::Subtitle-->
-                            <div class="text-gray-500 fw-semibold fs-6">Masukkan Email dan Password Anda
+                            <div class="text-gray-500 fw-semibold fs-6 pb-10">Masukkan Email dan Password Anda
                             </div>
                             <!--end::Subtitle=-->
                         </div>
@@ -63,10 +63,12 @@
                                 <p class="alert alert-danger">{{ $err }}</p>
                             @endforeach
                         @endif
-                        <div class="separator separator-content my-14">
-                            <span class="w-125px text-gray-500 fw-semibold fs-7"></span>
+                        <div class="separator separator-content my-20">
+                            <span class="w-300px text-gray-500 fw-semibold fs-7 ">
+                                <img src="{{ asset('assets2/img/icon-login.png') }}" alt="" width="100%">
+                            </span>
                         </div>
-                        <form class="form w-100" action="{{ url('/login') }}" method="POST">
+                        <form class="form w-100 pt-4" action="{{ url('/login') }}" method="POST">
                             @csrf
                             <!--end::Separator-->
                             <!--begin::Input group=-->
