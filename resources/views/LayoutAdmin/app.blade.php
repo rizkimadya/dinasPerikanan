@@ -69,6 +69,11 @@
         .ck.ck-editor {
             color: #000;
         }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            padding: 0;
+            margin: 0px 0px 0px 20px;
+        }
     </style>
 </head>
 <!--end Head-->
