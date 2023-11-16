@@ -11,6 +11,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PpidController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfilKamiController;
+use App\Http\Controllers\SssController;
 use App\Http\Controllers\SurveiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoKegiatanController;
@@ -98,14 +99,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     // pengumuman
     Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);
-    Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);
     Route::post('/admin/pengumuman', [PengumumanController::class, 'store']);
     Route::get('/admin/pengumuman/edit/{id}', [PengumumanController::class, 'edit']);
     Route::post('/admin/pengumuman/update/{id}', [PengumumanController::class, 'update']);
     Route::get('/admin/pengumuman/delete/{id}', [PengumumanController::class, 'destroy']);
 
     // album
-    Route::get('/admin/album', [AlbumKegiatanController::class, 'index']);
     Route::get('/admin/album', [AlbumKegiatanController::class, 'index']);
     Route::post('/admin/album', [AlbumKegiatanController::class, 'store']);
     Route::get('/admin/album/edit/{id}', [AlbumKegiatanController::class, 'edit']);
@@ -114,14 +113,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     // video
     Route::get('/admin/video', [VideoKegiatanController::class, 'index']);
-    Route::get('/admin/video', [VideoKegiatanController::class, 'index']);
     Route::post('/admin/video', [VideoKegiatanController::class, 'store']);
     Route::get('/admin/video/edit/{id}', [VideoKegiatanController::class, 'edit']);
     Route::post('/admin/video/update/{id}', [VideoKegiatanController::class, 'update']);
     Route::get('/admin/video/delete/{id}', [VideoKegiatanController::class, 'destroy']);
 
     // pengaduan
-    Route::get('/admin/pengaduan', [PengaduanController::class, 'index']);
     Route::get('/admin/pengaduan', [PengaduanController::class, 'index']);
     Route::post('/admin/pengaduan', [PengaduanController::class, 'store']);
     Route::get('/admin/pengaduan/edit/{id}', [PengaduanController::class, 'edit']);
@@ -130,14 +127,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     // survei
     Route::get('/admin/survei', [SurveiController::class, 'index']);
-    Route::get('/admin/survei', [SurveiController::class, 'index']);
     Route::post('/admin/survei', [SurveiController::class, 'store']);
     Route::get('/admin/survei/edit/{id}', [SurveiController::class, 'edit']);
     Route::post('/admin/survei/update/{id}', [SurveiController::class, 'update']);
     Route::get('/admin/survei/delete/{id}', [SurveiController::class, 'destroy']);
 
     // rpjmd
-    Route::get('/admin/rpjmd', [InformasiBerkalaController::class, 'rpjmd']);
     Route::get('/admin/rpjmd', [InformasiBerkalaController::class, 'rpjmd']);
     Route::post('/admin/rpjmd', [InformasiBerkalaController::class, 'storeRpjmd']);
     Route::get('/admin/rpjmd/edit/{id}', [InformasiBerkalaController::class, 'editRpjmd']);
@@ -146,14 +141,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     // renstra
     Route::get('/admin/renstra', [InformasiBerkalaController::class, 'renstra']);
-    Route::get('/admin/renstra', [InformasiBerkalaController::class, 'renstra']);
     Route::post('/admin/renstra', [InformasiBerkalaController::class, 'storeRenstra']);
     Route::get('/admin/renstra/edit/{id}', [InformasiBerkalaController::class, 'editRenstra']);
     Route::post('/admin/renstra/update/{id}', [InformasiBerkalaController::class, 'updateRenstra']);
     Route::get('/admin/renstra/delete/{id}', [InformasiBerkalaController::class, 'destroyRenstra']);
 
     // renja
-    Route::get('/admin/renja', [InformasiBerkalaController::class, 'renja']);
     Route::get('/admin/renja', [InformasiBerkalaController::class, 'renja']);
     Route::post('/admin/renja', [InformasiBerkalaController::class, 'storeRenja']);
     Route::get('/admin/renja/edit/{id}', [InformasiBerkalaController::class, 'editRenja']);
@@ -162,9 +155,16 @@ Route::group(['middleware' => 'auth'], function () {
 
     // kua
     Route::get('/admin/kua', [InformasiBerkalaController::class, 'kua']);
-    Route::get('/admin/kua', [InformasiBerkalaController::class, 'kua']);
     Route::post('/admin/kua', [InformasiBerkalaController::class, 'storeKua']);
     Route::get('/admin/kua/edit/{id}', [InformasiBerkalaController::class, 'editKua']);
     Route::post('/admin/kua/update/{id}', [InformasiBerkalaController::class, 'updateKua']);
-    Route::get('/admin/kua/delete/{id}', [InformasiBerkalaController::class, 'destroyRenstra']);
+    Route::get('/admin/kua/delete/{id}', [InformasiBerkalaController::class, 'destroyKua']);
+
+
+    // sss
+    Route::get('/admin/sss', [SssController::class, 'index']);
+    Route::post('/admin/sss', [SssController::class, 'store']);
+    Route::get('/admin/sss/edit/{id}', [SssController::class, 'edit']);
+    Route::post('/admin/sss/update/{id}', [SssController::class, 'update']);
+    Route::get('/admin/sss/delete/{id}', [SssController::class, 'destroy']);
 });
