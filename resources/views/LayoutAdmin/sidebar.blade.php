@@ -511,7 +511,7 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Standar Operasional Prosedur' ? 'active' : '' }}"
-                                        href="{{ url('/admin/pengaduan') }}">
+                                        href="{{ url('/admin/sop') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -522,7 +522,7 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Tata Cara Permohonan Informasi' ? 'active' : '' }}"
-                                        href="{{ url('/admin/survei') }}">
+                                        href="{{ url('/admin/tcpi') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -534,7 +534,7 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Formulir Permohonan Informasi' ? 'active' : '' }}"
-                                        href="{{ url('/admin/survei') }}">
+                                        href="{{ url('/admin/fpi') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -546,7 +546,7 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Daftar Informasi' ? 'active' : '' }}"
-                                        href="{{ url('/admin/survei') }}">
+                                        href="{{ url('/admin/di') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>

@@ -11,6 +11,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PpidController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfilKamiController;
+use App\Http\Controllers\SertaMertaController;
 use App\Http\Controllers\SssController;
 use App\Http\Controllers\SurveiController;
 use App\Http\Controllers\UserController;
@@ -159,6 +160,34 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/kua/edit/{id}', [InformasiBerkalaController::class, 'editKua']);
     Route::post('/admin/kua/update/{id}', [InformasiBerkalaController::class, 'updateKua']);
     Route::get('/admin/kua/delete/{id}', [InformasiBerkalaController::class, 'destroyKua']);
+
+    // sop
+    Route::get('/admin/sop', [SertaMertaController::class, 'sop']);
+    Route::post('/admin/sop', [SertaMertaController::class, 'storeSop']);
+    Route::get('/admin/sop/edit/{id}', [SertaMertaController::class, 'editSop']);
+    Route::post('/admin/sop/update/{id}', [SertaMertaController::class, 'updateSop']);
+    Route::get('/admin/sop/delete/{id}', [SertaMertaController::class, 'destroySop']);
+
+    // tcpi
+    Route::get('/admin/tcpi', [SertaMertaController::class, 'tcpi']);
+    Route::post('/admin/tcpi', [SertaMertaController::class, 'storeTcpi']);
+    Route::get('/admin/tcpi/edit/{id}', [SertaMertaController::class, 'editTcpi']);
+    Route::post('/admin/tcpi/update/{id}', [SertaMertaController::class, 'updateTcpi']);
+    Route::get('/admin/tcpi/delete/{id}', [SertaMertaController::class, 'destroyTcpi']);
+
+    // fpi
+    Route::get('/admin/fpi', [SertaMertaController::class, 'fpi']);
+    Route::post('/admin/fpi', [SertaMertaController::class, 'storeFpi']);
+    Route::get('/admin/fpi/edit/{id}', [SertaMertaController::class, 'editFpi']);
+    Route::post('/admin/fpi/update/{id}', [SertaMertaController::class, 'updateFpi']);
+    Route::get('/admin/fpi/delete/{id}', [SertaMertaController::class, 'destroyFpi']);
+
+    // di
+    Route::get('/admin/di', [SertaMertaController::class, 'di']);
+    Route::post('/admin/di', [SertaMertaController::class, 'storeDi']);
+    Route::get('/admin/di/edit/{id}', [SertaMertaController::class, 'editDi']);
+    Route::post('/admin/di/update/{id}', [SertaMertaController::class, 'updateDi']);
+    Route::get('/admin/di/delete/{id}', [SertaMertaController::class, 'destroyDi']);
 
 
     // sss
