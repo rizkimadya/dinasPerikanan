@@ -404,7 +404,7 @@
                             <span class="menu-arrow d-lg-none"></span>
                         </span>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion {{ $title == 'RPMJD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -433,19 +433,19 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'RPJMD' ? 'active' : '' }}"
-                                        href="{{ url('/admin/pengaduan') }}">
+                                        href="{{ url('/admin/rpjmd') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">RPJMD (Rencana Pembangunan Daerah Jangka
-                                            Menengah)</span>
+                                        <span class="menu-title">RPJMD (Rencana Pembangunan Jangka
+                                            Menengah Daerah)</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Renstra (Rencana Strategis)' ? 'active' : '' }}"
-                                        href="{{ url('/admin/survei') }}">
+                                        href="{{ url('/admin/renstra') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -457,7 +457,7 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Renja (Rencana Kerja)' ? 'active' : '' }}"
-                                        href="{{ url('/admin/survei') }}">
+                                        href="{{ url('/admin/renja') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
@@ -469,7 +469,7 @@
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'active' : '' }}"
-                                        href="{{ url('/admin/survei') }}">
+                                        href="{{ url('/admin/kua') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>

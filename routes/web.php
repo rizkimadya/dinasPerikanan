@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AlbumKegiatanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\InformasiBerkalaController;
 use App\Http\Controllers\PejabatController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PengumumanController;
@@ -134,4 +135,36 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/survei/edit/{id}', [SurveiController::class, 'edit']);
     Route::post('/admin/survei/update/{id}', [SurveiController::class, 'update']);
     Route::get('/admin/survei/delete/{id}', [SurveiController::class, 'destroy']);
+
+    // rpjmd
+    Route::get('/admin/rpjmd', [InformasiBerkalaController::class, 'rpjmd']);
+    Route::get('/admin/rpjmd', [InformasiBerkalaController::class, 'rpjmd']);
+    Route::post('/admin/rpjmd', [InformasiBerkalaController::class, 'storeRpjmd']);
+    Route::get('/admin/rpjmd/edit/{id}', [InformasiBerkalaController::class, 'editRpjmd']);
+    Route::post('/admin/rpjmd/update/{id}', [InformasiBerkalaController::class, 'updateRpjmd']);
+    Route::get('/admin/rpjmd/delete/{id}', [InformasiBerkalaController::class, 'destroyRpjmd']);
+
+    // renstra
+    Route::get('/admin/renstra', [InformasiBerkalaController::class, 'renstra']);
+    Route::get('/admin/renstra', [InformasiBerkalaController::class, 'renstra']);
+    Route::post('/admin/renstra', [InformasiBerkalaController::class, 'storeRenstra']);
+    Route::get('/admin/renstra/edit/{id}', [InformasiBerkalaController::class, 'editRenstra']);
+    Route::post('/admin/renstra/update/{id}', [InformasiBerkalaController::class, 'updateRenstra']);
+    Route::get('/admin/renstra/delete/{id}', [InformasiBerkalaController::class, 'destroyRenstra']);
+
+    // renja
+    Route::get('/admin/renja', [InformasiBerkalaController::class, 'renja']);
+    Route::get('/admin/renja', [InformasiBerkalaController::class, 'renja']);
+    Route::post('/admin/renja', [InformasiBerkalaController::class, 'storeRenja']);
+    Route::get('/admin/renja/edit/{id}', [InformasiBerkalaController::class, 'editRenja']);
+    Route::post('/admin/renja/update/{id}', [InformasiBerkalaController::class, 'updateRenja']);
+    Route::get('/admin/renja/delete/{id}', [InformasiBerkalaController::class, 'destroyRenja']);
+
+    // kua
+    Route::get('/admin/kua', [InformasiBerkalaController::class, 'kua']);
+    Route::get('/admin/kua', [InformasiBerkalaController::class, 'kua']);
+    Route::post('/admin/kua', [InformasiBerkalaController::class, 'storeKua']);
+    Route::get('/admin/kua/edit/{id}', [InformasiBerkalaController::class, 'editKua']);
+    Route::post('/admin/kua/update/{id}', [InformasiBerkalaController::class, 'updateKua']);
+    Route::get('/admin/kua/delete/{id}', [InformasiBerkalaController::class, 'destroyRenstra']);
 });
