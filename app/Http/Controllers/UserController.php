@@ -10,4 +10,9 @@ class UserController extends Controller
     {
         return view('User.beranda');
     }
+
+    public function kontak()
+    {
+        return view('User.kontak');
+    }
 }

@@ -106,19 +106,19 @@
                 </div>
             </div>
             <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
-                style="background-image: url(assets2/img/bg-login.png)">
+                style="background-image: url(assets2/img/bg_login.png)">
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-center py-15 px-5 px-md-15 w-100">
                     <!--begin::Logo-->
-                    <a href="{{ url('/') }}">
-                        <img class="mx-auto mb-10 mb-lg-20 d-block" style="width: 50%;"
-                            src="{{ asset('assets2/img/logo_sulsel.png') }}" alt="logo" />
-                    </a>
                     <!--end::Logo-->
                     <!--begin::Image-->
                     <!--end::Image-->
                     <!--begin::Title-->
-                    <h1 style="color:#151521;" class="fs-2qx fw-bolder text-center mb-7">Dinas Kelautan dan Perikanan
+                    <a href="{{ url('/') }}">
+                        <img class="mx-auto mb-10 mb-lg-20 d-block" style="width: 100%;"
+                            src="{{ asset('assets2/img/logo_sulsel.png') }}" alt="logo" />
+                    </a>
+                    <h1 style="color:#1353ad;" class="fs-2qx fw-bolder text-center mb-7">Dinas Kelautan dan Perikanan
                         <br> Provinsi Sulawesi Selatan
                     </h1>
                     <!--end::Title-->

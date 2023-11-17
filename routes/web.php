@@ -5,6 +5,7 @@ use App\Http\Controllers\AlbumKegiatanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\InformasiBerkalaController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\PejabatController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\PengumumanController;
@@ -31,6 +32,8 @@ use Illuminate\Support\Facades\Route;
 
 // user
 Route::get('/', [UserController::class, 'beranda']);
+Route::get('/kontak', [UserController::class, 'kontak']);
+Route::post('/kontak', [KontakController::class, 'store']);
 
 // authentication
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -49,6 +52,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/berita/edit/{id}', [BeritaController::class, 'edit']);
     Route::post('/admin/berita/update/{id}', [BeritaController::class, 'update']);
     Route::get('/admin/berita/delete/{id}', [BeritaController::class, 'destroy']);
+
+    // kontak
+    Route::get('/admin/kontak', [KontakController::class, 'index']);
+    Route::get('/admin/kontak/delete/{id}', [KontakController::class, 'destroy']);
 
     // pejabat
     Route::get('/admin/pejabat', [PejabatController::class, 'index']);
