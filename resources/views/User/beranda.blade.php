@@ -7,7 +7,7 @@
             <h1> Beranda <span> Website</span></h1>
             <h2>Dinas Kelautan & Perikanan Provinsi Sulawesi Selatan</h2>
             <div class="d-flex">
-                <a href="#featured-services" class="btn-get-started scrollto">Mulai Lihat</a>
+                <a href="#featured-services" class="btn-get-started scrollto">Layanan</a>
             </div>
         </div>
     </section><!-- End Hero -->
@@ -106,12 +106,76 @@
                 </div>
                 <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                        <a href="#" class="text-center">
+                        <div data-bs-toggle="modal" data-bs-target="#exampleModal2" class="text-center">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
                             <h4 class="title text-center"><a href="#">Survei</a></h4>
                             <p class="description text-center">Fitur Layanan Survei Kepuasan kepada Dinas Kelautan &
                                 Perikanan</p>
-                        </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Suevei Kepuasan -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Form Suevei Kepuasan</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{ url('/survei') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="row" style="max-height: 62vh; overflow: auto">
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="nama_responden" class="form-label">Nama
+                                                </label>
+                                                <input type="text" class="form-control" name="nama_responden"
+                                                    id="nama" placeholder="Masukkan Nama ">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="no_telp" class="form-label">No
+                                                    Telp/Wa</label>
+                                                <input type="number" class="form-control" name="no_telp" id="no_telp"
+                                                    placeholder="Masukkan No Telp/Wa">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="penilaian_kepuasan" class="form-label">Penilaian 1-100</label>
+                                                <input type="range" class="form-range" name="penilaian_kepuasan"
+                                                    id="penilaian_kepuasan" placeholder="Masukkan Penilaian 1-100"
+                                                    min="1" max="100">
+                                                <output for="penilaian_kepuasan"
+                                                    id="output_penilaian_kepuasan">50</output>
+                                            </div>
+
+                                            <script>
+                                                var slider = document.getElementById("penilaian_kepuasan");
+                                                var output = document.getElementById("output_penilaian_kepuasan");
+                                                output.innerHTML = slider.value;
+
+                                                slider.oninput = function() {
+                                                    output.innerHTML = this.value;
+                                                }
+                                            </script>
+
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="keterangan" class="form-label">Keterangan </label>
+                                            <textarea name="keterangan" id="editor2" style="height: 100px; color:#000;"></textarea>
+                                        </div>
+
+                                    </div>
+                                    <div class="mt-5 justify-content-center d-flex gap-2">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-primary">Kirim Suvei</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

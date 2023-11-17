@@ -24,13 +24,13 @@ class SurveiController extends Controller
 
         $survei->save();
         // Alert::success('Success', 'Berhasil menambah survei');
-        return redirect('/admin/survei');
+        return redirect('/');
     }
 
     public function edit($id)
     {
         $survei = Survei::where('id', $id)->firstOrFail();
-        return view('Admin.layanan.surveiKepuasan.edit', compact('survei'));
+        return view('Admin.layanan.surveiKepuasan.show', compact('survei'));
     }
 
     public function update(Request $request, $id)

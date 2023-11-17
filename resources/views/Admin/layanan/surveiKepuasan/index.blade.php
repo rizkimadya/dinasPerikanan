@@ -8,8 +8,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>File Pengaduan</th>
-                            <th>Judul Pengaduan</th>
+                            <th>Nama Responden</th>
+                            <th>Nomor Telpon</th>
+                            <th>Penilaian</th>
                             <th>Keterangan</th>
                             <th class="text-center">Aksi</th>
                         </tr>
@@ -18,13 +19,9 @@
                         @foreach ($survei as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>
-                                    <a href="{{ asset('storage/filePengumuman/' . $item->file) }}" target="_blank">Lihat File
-                                        Pengaduan
-                                    </a>
-                                </td>
-
-                                <td>{{ $item->judul_pengumuman }}</td>
+                                <td>{{ $item->nama_responden }}</td>
+                                <td>{{ $item->no_telp }}</td>
+                                <td>{{ $item->penilaian_kepuasan }}</td>
                                 <td>{!! Str::limit($item->keterangan, 50) !!}</td>
                                 <td class="text-end pe-3">
                                     <a href="#" class="btn btn-light btn-active-light-primary btn-sm"
@@ -44,7 +41,7 @@
                                         data-kt-menu="true">
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="/admin/survei/edit/{{ $item->id }}" class="menu-link px-3">Edit</a>
+                                            <a href="/admin/survei/lihat/{{ $item->id }}" class="menu-link px-3">Lihat</a>
                                         </div>
                                         <!--end::Menu item-->
                                         <!--begin::Menu item-->

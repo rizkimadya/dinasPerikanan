@@ -35,6 +35,7 @@ Route::get('/', [UserController::class, 'beranda']);
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);
+Route::post('/survei', [SurveiController::class, 'store']);
 
 // authentication
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -136,8 +137,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     // survei
     Route::get('/admin/survei', [SurveiController::class, 'index']);
-    Route::post('/admin/survei', [SurveiController::class, 'store']);
-    Route::get('/admin/survei/edit/{id}', [SurveiController::class, 'edit']);
+    Route::get('/admin/survei/lihat/{id}', [SurveiController::class, 'edit']);
     Route::post('/admin/survei/update/{id}', [SurveiController::class, 'update']);
     Route::get('/admin/survei/delete/{id}', [SurveiController::class, 'destroy']);
 
