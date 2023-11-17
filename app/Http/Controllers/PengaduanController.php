@@ -41,31 +41,31 @@ class PengaduanController extends Controller
 
                 'file_pengaduan' => $nama_file,
             ]);
+        } else {
+            $pengaduan = new Pengaduan([
+                'nama_pelapor' => $request->nama_pelapor,
+                'alamat' => $request->alamat,
+                'no_telp' => $request->no_telp,
+
+                'tgl_kejadian' => $request->tgl_kejadian,
+                'lokasi_kejadian' => $request->lokasi_kejadian,
+                'deskripsi_kejadian' => $request->deskripsi_kejadian,
+
+                'jenis_keluhan' => $request->jenis_keluhan,
+                'detail_keluhan' => $request->detail_keluhan,
+            ]);
         }
-
-        $pengaduan = new Pengaduan([
-            'nama_pelapor' => $request->nama_pelapor,
-            'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
-
-            'tgl_kejadian' => $request->tgl_kejadian,
-            'lokasi_kejadian' => $request->lokasi_kejadian,
-            'deskripsi_kejadian' => $request->deskripsi_kejadian,
-
-            'jenis_keluhan' => $request->jenis_keluhan,
-            'detail_keluhan' => $request->detail_keluhan,
-        ]);
 
         $pengaduan->save();
         // Alert::success('Success', 'Berhasil menambah pengaduan');
-        return redirect('/admin/pengaduan');
+        return redirect('/');
     }
 
 
     public function edit($id)
     {
         $pengaduan = Pengaduan::where('id', $id)->firstOrFail();
-        return view('Admin.layanan.pengaduan.edit', compact('pengaduan'));
+        return view('Admin.layanan.pengaduan.show', compact('pengaduan'));
     }
 
 

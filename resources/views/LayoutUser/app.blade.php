@@ -18,6 +18,10 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -42,9 +46,12 @@
                 <i class="bi bi-phone d-flex align-items-center ms-4"><span> (0411) 873680</span></i>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
-                <a target="_blank" href="https://www.youtube.com/channel/UCMjjBCVi_Z3CZmU1FJ2QUaQ" class="youtube"><i class="bi bi-youtube"></i></a>
-                <a target="_blank" href="https://www.facebook.com/profile.php?id=100091795923755" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a target="_blank" href="https://www.instagram.com/dkpsulsel/" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCMjjBCVi_Z3CZmU1FJ2QUaQ" class="youtube"><i
+                        class="bi bi-youtube"></i></a>
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100091795923755" class="facebook"><i
+                        class="bi bi-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/dkpsulsel/" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
                 {{-- <a target="_blank" href="https://www.instagram.com/dkpsulsel/" class="instagram"><i class="bi bi-tiktok"></i></a> --}}
             </div>
         </div>
@@ -75,6 +82,18 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                ckfinder: {
+                    uploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}",
+                },
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 </body>
 

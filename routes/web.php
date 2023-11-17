@@ -34,6 +34,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [UserController::class, 'beranda']);
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
+Route::post('/pengaduan', [PengaduanController::class, 'store']);
 
 // authentication
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -128,9 +129,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     // pengaduan
     Route::get('/admin/pengaduan', [PengaduanController::class, 'index']);
-    Route::post('/admin/pengaduan', [PengaduanController::class, 'store']);
-    Route::get('/admin/pengaduan/edit/{id}', [PengaduanController::class, 'edit']);
-    Route::post('/admin/pengaduan/update/{id}', [PengaduanController::class, 'update']);
+    Route::get('/admin/pengaduan/lihat/{id}', [PengaduanController::class, 'edit']);
+    // Route::get('/admin/pengaduan/edit/{id}', [PengaduanController::class, 'edit']);
+    // Route::post('/admin/pengaduan/update/{id}', [PengaduanController::class, 'update']);
     Route::get('/admin/pengaduan/delete/{id}', [PengaduanController::class, 'destroy']);
 
     // survei

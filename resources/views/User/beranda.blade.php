@@ -21,14 +21,89 @@
             <div class="row justify-content-center">
                 <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#" class="text-center">
+                        <div data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-center">
                             <div class="icon"><i class="bx bx-file"></i></div>
                             <h4 class="title text-center"><a href="#">Pengaduan</a></h4>
                             <p class="description text-center">Fitur Layanan Pengaduan kepada Dinas Kelautan & Perikanan</p>
-                        </a>
+                        </div>
                     </div>
                 </div>
+                <!-- Modal Pengaduan -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Form Pengaduan</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{ url('/pengaduan') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="row" style="max-height: 62vh; overflow: auto">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="file_pengaduan" class="form-label">File Pengaduan
+                                                    <span class="text-danger">PDF</span></label>
+                                                <input type="file" class="form-control" name="file_pengaduan"
+                                                    id="file_pengaduan" accept=".pdf">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="nama_pelapor" class="form-label">Nama Pelapor</label>
+                                                <input type="text" class="form-control" name="nama_pelapor"
+                                                    id="nama_pelapor" placeholder="Masukkan Nama Pelapor">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="alamat" class="form-label">Alamat Pelapor</label>
+                                                <input type="text" class="form-control" name="alamat" id="alamat"
+                                                    placeholder="Masukkan Alamat Pelapor">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="no_telp" class="form-label">Nomor Telpon Pelapor</label>
+                                                <input type="number" class="form-control" name="no_telp" id="no_telp"
+                                                    placeholder="Masukkan Nomor Telpon Pelapor">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="tgl_kejadian" class="form-label">Tanggal Kejadian</label>
+                                                <input type="date" class="form-control" name="tgl_kejadian"
+                                                    id="tgl_kejadian" placeholder="Masukkan Tanggal Kejadian">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="lokasi_kejadian" class="form-label">Lokasi Kejadian</label>
+                                                <input type="text" class="form-control" name="lokasi_kejadian"
+                                                    id="lokasi_kejadian" placeholder="Masukkan Lokasi Kejadian">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="jenis_keluhan" class="form-label">Jenis Keluhan</label>
+                                                <input type="text" class="form-control" name="jenis_keluhan"
+                                                    id="jenis_keluhan" placeholder="Masukkan Jenis Keluhan">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="detail_keluhan" class="form-label">Detail Keluhan</label>
+                                                <input type="text" class="form-control" name="detail_keluhan"
+                                                    id="detail_keluhan" placeholder="Masukkan Detail Keluhan">
+                                            </div>
+                                        </div>
 
+                                        <div class="mb-3">
+                                            <label for="deskripsi_kejadian" class="form-label">Deskripsi </label>
+                                            <textarea name="deskripsi_kejadian" id="editor" style="height: 100px; color:#000;"></textarea>
+                                        </div>
+
+                                    </div>
+                                    <div class="mt-5 justify-content-center d-flex gap-2">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-primary">Kirim Pengaduan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                         <a href="#" class="text-center">
@@ -130,7 +205,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="" class="btn shadow px-4 fw-semibold" style="background: #fff; color:#276ccb;">Lihat Semua</a>
+                <a href="" class="btn shadow px-4 fw-semibold" style="background: #fff; color:#276ccb;">Lihat
+                    Semua</a>
             </div>
         </div>
     </section><!-- End Team Section -->
