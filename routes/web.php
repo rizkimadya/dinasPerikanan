@@ -32,10 +32,15 @@ use Illuminate\Support\Facades\Route;
 
 // user
 Route::get('/', [UserController::class, 'beranda']);
+Route::get('/pengumuman', [UserController::class, 'pengumuman']);
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);
 Route::post('/survei', [SurveiController::class, 'store']);
+Route::get('/album', [UserController::class, 'album']);
+Route::get('/video', [UserController::class, 'video']);
+
+
 
 // authentication
 Route::get('/login', [AuthController::class, 'login'])->name('login');

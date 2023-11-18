@@ -40,8 +40,8 @@
                   </li>
                   <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i class="bi bi-chevron-down"></i></a>
                       <ul>
-                          <li><a href="#">Album Kegiatan</a></li>
-                          <li><a href="#">Videp</a></li>
+                          <li><a href="{{ url('/album') }}">Album Kegiatan</a></li>
+                          <li><a href="{{ url('/video') }}">Video</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>

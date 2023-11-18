@@ -36,7 +36,7 @@
                     <div class="mb-3">
                         <label for="file" class="form-label">File <span class="text-danger">format
                                 pdf</span></label>
-                        <input type="file" class="form-control" name="file" required id="file" accept=".pdf">
+                        <input type="file" class="form-control" name="file" id="file" accept=".pdf">
                     </div>
                     <div class="mb-3">
                         <label for="judul_pengumuman" class="form-label">Judul Pengumuman</label>
