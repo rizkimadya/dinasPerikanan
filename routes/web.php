@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\Route;
 // user
 Route::get('/', [UserController::class, 'beranda']);
 Route::get('/pengumuman', [UserController::class, 'pengumuman']);
+Route::get('/berita', [UserController::class, 'berita']);
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);

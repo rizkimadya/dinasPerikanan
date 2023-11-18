@@ -12,7 +12,7 @@
     </section>
 
     <!-- ======= Pengumuman Section ======= -->
-    <section id="pengumuman" class="services">
+    <section id="pengumuman" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">

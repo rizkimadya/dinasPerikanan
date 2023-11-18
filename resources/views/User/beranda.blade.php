@@ -211,7 +211,7 @@
                 @endforeach
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="" class="btn shadow px-4 fw-semibold" style="background: #fff; color:#276ccb;">Lihat
+                <a href="{{ url('/berita') }}" class="btn shadow px-4 fw-semibold" style="background: #fff; color:#276ccb;">Lihat
                     Semua</a>
             </div>
         </div>
@@ -225,37 +225,37 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="count-box">
-                        <i class="bi bi-emoji-smile"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                        <i class="bi bi-journal-richtext"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumpengaduan }}" data-purecounter-duration="1"
                             class="purecounter"></span>
-                        <p>Happy Clients</p>
+                        <p>Jumlah Pengaduan</p>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                     <div class="count-box">
-                        <i class="bi bi-journal-richtext"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                        <i class="bi bi-emoji-smile"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumsurvei }}" data-purecounter-duration="1"
                             class="purecounter"></span>
-                        <p>Projects</p>
+                        <p>Jumlah Survei Kepuasan</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="bi bi-book"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumberita }}" data-purecounter-duration="1"
+                            class="purecounter"></span>
+                        <p>Jumlah Berita</p>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                     <div class="count-box">
                         <i class="bi bi-headset"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumpengumuman }}" data-purecounter-duration="1"
                             class="purecounter"></span>
-                        <p>Hours Of Support</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                    <div class="count-box">
-                        <i class="bi bi-people"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                            class="purecounter"></span>
-                        <p>Hard Workers</p>
+                        <p>Jumlah Pengumuman</p>
                     </div>
                 </div>
 
@@ -266,7 +266,7 @@
 
 
     <!-- ======= Pengumuman Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -288,99 +288,10 @@
                 @endforeach
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="" class="btn shadow px-4 fw-semibold" style="background: #276ccb; color:#fff;">Lihat
+                <a href="{{ url('/pengumuman') }}" class="btn shadow px-4 fw-semibold" style="background: #276ccb; color:#fff;">Lihat
                     Semua</a>
             </div>
         </div>
     </section><!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-        <div class="container" data-aos="zoom-in">
-
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                risus at semper.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                legam anim culpa.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                minim.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                dolore labore illum veniam.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                culpa fore nisi cillum quid.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section><!-- End Testimonials Section -->
 
 @endsection

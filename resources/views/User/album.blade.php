@@ -12,7 +12,7 @@
     </section>
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="album" class="portfolio">
+    <section id="album" class="portfolio section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
