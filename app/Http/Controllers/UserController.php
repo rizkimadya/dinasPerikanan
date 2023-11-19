@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\AlbumKegiatan;
 use App\Models\Berita;
+use App\Models\Pejabat;
 use App\Models\Pengaduan;
 use App\Models\Pengumuman;
+use App\Models\Profil;
 use App\Models\Survei;
 use App\Models\VideoKegiatan;
 use Illuminate\Http\Request;
@@ -54,6 +56,57 @@ class UserController extends Controller
         $beritaLainnya = Berita::where('id', '!=', $id)->latest()->get();
         return view('User.berita.detail', compact('berita', 'beritaLainnya'));
     }
+
+    //profil pejabat
+    public function profilPejabat()
+    {
+        $pejabat = Pejabat::latest()->get();
+
+        return view('User.profil.profilPejabat', compact('pejabat'));
+    }
+
+    // profil dinas
+    public function profilDinas()
+    {
+        $profil = Profil::where('kategori', 'profilKami')->first();
+
+        return  view('User.profil.profilDinas', compact('profil'));
+    }
+
+    // maksud & tujuan
+    public function maksudTujuan()
+    {
+        $maksudTujuan = Profil::where('kategori', 'maksudTujuan')->first();
+
+        return  view('User.profil.maksudTujuan', compact('maksudTujuan'));
+    }
+
+    // tugas & fungsi
+    public function tugasFungsi()
+    {
+        $tugasFungsi = Profil::where('kategori', 'tugasFungsi')->first();
+
+        return  view('User.profil.tugasFungsi', compact('tugasFungsi'));
+    }
+
+    // maklumat pelayanan
+    public function maklumatPelayanan()
+    {
+        $maklumatPelayanan = Profil::where('kategori', 'maklumatPelayanan')->first();
+
+        return  view('User.profil.maklumatPelayanan', compact('maklumatPelayanan'));
+    }
+
+    // tentang kami
+    public function tentangKami()
+    {
+        $tentangKami = Profil::where('kategori', 'tentangKami')->first();
+
+        return  view('User.profil.tentangKami', compact('tentangKami'));
+    }
+
+
+    // dokumentasi
 
     public function album()
     {

@@ -21,12 +21,12 @@
                           href="{{ url('/pengumuman') }}">Pengumuman</a></li>
                   <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                       <ul>
-                          <li><a href="#">Profil Pejabat</a></li>
-                          <li><a href="#">Profil Dinas</a></li>
-                          <li><a href="#">Maksud & Tujuan</a></li>
-                          <li><a href="#">Tugas & Fungsi</a></li>
-                          <li><a href="#">Maklumat Pelayanan</a></li>
-                          <li><a href="#">Tentang Kami</a></li>
+                          <li><a href="{{ url('/profil-pejabat') }}">Profil Pejabat</a></li>
+                          <li><a href="{{ url('/profil-dinas') }}">Profil Dinas</a></li>
+                          <li><a href="{{ url('/maksud-tujuan') }}">Maksud & Tujuan</a></li>
+                          <li><a href="{{ url('/tugas-fungsi') }}">Tugas & Fungsi</a></li>
+                          <li><a href="{{ url('/maklumat-pelayanan') }}">Maklumat Pelayanan</a></li>
+                          <li><a href="{{ url('/tentang-kami') }}">Tentang Kami</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
