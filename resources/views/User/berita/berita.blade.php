@@ -24,7 +24,7 @@
             <div class="row">
                 @foreach ($berita as $item)
                     <div class="col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <a href="#" class="member">
+                        <a href="/berita/detail/{{ $item->id }}" class="member">
                             <div class="member-img">
                                 <img src="{{ asset('storage/fileBerita/' . $item->gambar) }}" class="img-fluid"
                                     alt="{{ $item->judul }}">

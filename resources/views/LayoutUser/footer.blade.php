@@ -20,7 +20,7 @@
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/') }}">Beranda</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/pengumuman') }}">Pengumuman</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Berita</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/berita') }}">Berita</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/album') }}">Album Kegiatan</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/video') }}">Video Kegiatan</a></li>
                     </ul>
@@ -57,7 +57,7 @@
 
     <div class="container py-4">
         <div class="copyright">
-            &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Dinas Kelautan & Perikanan Sulawesi Selatan</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
 

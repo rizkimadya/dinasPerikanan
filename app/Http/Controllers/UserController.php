@@ -29,14 +29,30 @@ class UserController extends Controller
     {
         $pengumuman = Pengumuman::latest()->get();
 
-        return view('User.pengumuman', compact('pengumuman'));
+        return view('User.pengumuman.pengumuman', compact('pengumuman'));
+    }
+
+    public function detailPengumuman($id)
+    {
+        $pengumuman = Pengumuman::where('id', $id)->firstOrFail();
+
+        $pengumumanLain = Pengumuman::where('id', '!=', $id)->latest()->get();
+        return view('User.pengumuman.detail', compact('pengumuman', 'pengumumanLain'));
     }
 
     public function berita()
     {
         $berita = Berita::latest()->get();
 
-        return view('User.berita', compact('berita'));
+        return view('User.berita.berita', compact('berita'));
+    }
+
+    public function detailBerita($id)
+    {
+        $berita = Berita::where('id', $id)->firstOrFail();
+
+        $beritaLainnya = Berita::where('id', '!=', $id)->latest()->get();
+        return view('User.berita.detail', compact('berita', 'beritaLainnya'));
     }
 
     public function album()

@@ -24,11 +24,13 @@
             <div class="row">
                 @foreach ($pengumuman as $item)
                     <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">{{ $item->judul_pengumuman }}</a></h4>
-                            <p>{!! Str::limit($item->keterangan, 200) !!}</p>
-                        </div>
+                        <a href="/pengumuman/detail/{{ $item->id }}">
+                            <div class="icon-box">
+                                <div class="icon"><i class="bx bx-file"></i></div>
+                                <h4><a href="/pengumuman/detail/{{ $item->id }}">{{ $item->judul_pengumuman }}</a></h4>
+                                <p>{!! Str::limit($item->keterangan, 200) !!}</p>
+                            </div>
+                        </a>
                     </div>
                 @endforeach
             </div>

@@ -32,8 +32,15 @@ use Illuminate\Support\Facades\Route;
 
 // user
 Route::get('/', [UserController::class, 'beranda']);
+
+// pengumuman
 Route::get('/pengumuman', [UserController::class, 'pengumuman']);
+Route::get('/pengumuman/detail/{id}', [UserController::class, 'detailPengumuman']);
+
+// berita
 Route::get('/berita', [UserController::class, 'berita']);
+Route::get('/berita/detail/{id}', [UserController::class, 'detailBerita']);
+
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);

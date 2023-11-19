@@ -19,11 +19,11 @@
 
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0" style="cursor: pointer;">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                         <div data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-center">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title text-center"><a href="#">Pengaduan</a></h4>
+                            <h4 class="title text-center"><a>Pengaduan</a></h4>
                             <p class="description text-center">Fitur Layanan Pengaduan kepada Dinas Kelautan & Perikanan</p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="col-md-4 d-flex align-items-stretch mb-5 mb-lg-0" style="cursor: pointer;">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                         <div data-bs-toggle="modal" data-bs-target="#exampleModal2" class="text-center">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
@@ -197,7 +197,7 @@
             <div class="row">
                 @foreach ($berita as $item)
                     <div class="col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <a href="#" class="member">
+                        <a href="/berita/detail/{{ $item->id }}" class="member">
                             <div class="member-img">
                                 <img src="{{ asset('storage/fileBerita/' . $item->gambar) }}" class="img-fluid"
                                     alt="{{ $item->judul }}">
@@ -211,7 +211,8 @@
                 @endforeach
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="{{ url('/berita') }}" class="btn shadow px-4 fw-semibold" style="background: #fff; color:#276ccb;">Lihat
+                <a href="{{ url('/berita') }}" class="btn shadow px-4 fw-semibold"
+                    style="background: #fff; color:#276ccb;">Lihat
                     Semua</a>
             </div>
         </div>
@@ -226,8 +227,8 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="count-box">
                         <i class="bi bi-journal-richtext"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumpengaduan }}" data-purecounter-duration="1"
-                            class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumpengaduan }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
                         <p>Jumlah Pengaduan</p>
                     </div>
                 </div>
@@ -235,8 +236,8 @@
                 <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                     <div class="count-box">
                         <i class="bi bi-emoji-smile"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumsurvei }}" data-purecounter-duration="1"
-                            class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumsurvei }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
                         <p>Jumlah Survei Kepuasan</p>
                     </div>
                 </div>
@@ -244,8 +245,8 @@
                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                     <div class="count-box">
                         <i class="bi bi-book"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumberita }}" data-purecounter-duration="1"
-                            class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumberita }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
                         <p>Jumlah Berita</p>
                     </div>
                 </div>
@@ -253,8 +254,8 @@
                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                     <div class="count-box">
                         <i class="bi bi-headset"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumpengumuman }}" data-purecounter-duration="1"
-                            class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ $jumpengumuman }}"
+                            data-purecounter-duration="1" class="purecounter"></span>
                         <p>Jumlah Pengumuman</p>
                     </div>
                 </div>
@@ -279,19 +280,22 @@
                 @foreach ($pengumuman as $item)
                     <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">{{ $item->judul_pengumuman }}</a></h4>
-                            <p>{!! Str::limit($item->keterangan, 200) !!}</p>
-                        </div>
+                        <a href="/pengumuman/detail/{{ $item->id }}">
+                            <div class="icon-box">
+                                <div class="icon"><i class="bx bx-file"></i></div>
+                                <h4><a href="/pengumuman/detail/{{ $item->id }}">{{ $item->judul_pengumuman }}</a>
+                                </h4>
+                                <p>{!! Str::limit($item->keterangan, 200) !!}</p>
+                            </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <a href="{{ url('/pengumuman') }}" class="btn shadow px-4 fw-semibold" style="background: #276ccb; color:#fff;">Lihat
+                <a href="{{ url('/pengumuman') }}" class="btn shadow px-4 fw-semibold"
+                    style="background: #276ccb; color:#fff;">Lihat
                     Semua</a>
             </div>
         </div>
     </section><!-- End Services Section -->
-
 @endsection
