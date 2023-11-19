@@ -7,6 +7,7 @@ use App\Models\Berita;
 use App\Models\Pejabat;
 use App\Models\Pengaduan;
 use App\Models\Pengumuman;
+use App\Models\Ppid;
 use App\Models\Profil;
 use App\Models\Survei;
 use App\Models\VideoKegiatan;
@@ -103,6 +104,54 @@ class UserController extends Controller
         $tentangKami = Profil::where('kategori', 'tentangKami')->first();
 
         return  view('User.profil.tentangKami', compact('tentangKami'));
+    }
+
+    // visi misi
+    public function visiMisi()
+    {
+        $visiMisi = Ppid::where('kategori', 'visiMisi')->first();
+
+        return  view('User.ppid.visiMisi', compact('visiMisi'));
+    }
+
+    // maksud tujuan ppid
+    public function maksudTujuanPpid()
+    {
+        $maksudTujuan = Ppid::where('kategori', 'maksudTujuan')->first();
+
+        return  view('User.ppid.maksudTujuan', compact('maksudTujuan'));
+    }
+
+    // tugas & fungsi ppid
+    public function tugasFungsiPpid()
+    {
+        $tugasFungsi = Ppid::where('kategori', 'tugasFungsi')->first();
+
+        return  view('User.ppid.tugasFungsi', compact('tugasFungsi'));
+    }
+
+    // maklumat
+    public function maklumat()
+    {
+        $maklumat = Ppid::where('kategori', 'maklumat')->first();
+
+        return  view('User.ppid.maklumat', compact('maklumat'));
+    }
+
+    // hakKewajiban
+    public function hakKewajiban()
+    {
+        $hakKewajiban = Ppid::where('kategori', 'hakKewajiban')->first();
+
+        return  view('User.ppid.hakKewajiban', compact('hakKewajiban'));
+    }
+
+    // tentang
+    public function tentang()
+    {
+        $tentang = Ppid::where('kategori', 'tentang')->first();
+
+        return  view('User.ppid.tentang', compact('tentang'));
     }
 
 

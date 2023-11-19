@@ -31,11 +31,12 @@
                   </li>
                   <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
                       <ul>
-                          <li><a href="#">Visi Misi</a></li>
-                          <li><a href="#">Tugas & Fungsi</a></li>
-                          <li><a href="#">Maklumat</a></li>
-                          <li><a href="#">Hak & Kewajiban </a></li>
-                          <li><a href="#">Tentang PPID</a></li>
+                          <li><a href="{{ url('/visi-misi') }}">Visi Misi</a></li>
+                          <li><a href="{{ url('/tugas-fungsi-ppid') }}">Tugas & Fungsi</a></li>
+                          {{-- <li><a href="{{ url('/maksud-tujuan-ppid') }}">Maksud & Tujuan</a></li> --}}
+                          <li><a href="{{ url('/maklumat') }}">Maklumat</a></li>
+                          <li><a href="{{ url('/hak-kewajiban') }}">Hak & Kewajiban </a></li>
+                          <li><a href="{{ url('/tentang-ppid') }}">Tentang PPID</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i class="bi bi-chevron-down"></i></a>

@@ -43,21 +43,30 @@ Route::get('/berita/detail/{id}', [UserController::class, 'detailBerita']);
 
 // profil pejabat
 Route::get('/profil-pejabat', [UserController::class, 'profilPejabat']);
-
 // profil dinas
 Route::get('/profil-dinas', [UserController::class, 'profilDinas']);
-
 // maksud & tujuan
 Route::get('/maksud-tujuan', [UserController::class, 'maksudTujuan']);
-
 // tugas & fungsi
 Route::get('/tugas-fungsi', [UserController::class, 'tugasFungsi']);
-
 // maklumat pelayanan
 Route::get('/maklumat-pelayanan', [UserController::class, 'maklumatPelayanan']);
-
 // tentang kami
 Route::get('/tentang-kami', [UserController::class, 'tentangKami']);
+
+
+// visi misi
+Route::get('/visi-misi', [UserController::class, 'visiMisi']);
+// maksud tujuan
+Route::get('/maksud-tujuan-ppid', [UserController::class, 'maksudTujuanPpid']);
+// tugas fungsi ppid
+Route::get('/tugas-fungsi-ppid', [UserController::class, 'tugasFungsiPpid']);
+// maklumat
+Route::get('/maklumat', [UserController::class, 'maklumat']);
+// hakKewajiban
+Route::get('/hak-kewajiban', [UserController::class, 'hakKewajiban']);
+// tentang
+Route::get('/tentang-ppid', [UserController::class, 'tentang']);
 
 
 Route::get('/kontak', [UserController::class, 'kontak']);
