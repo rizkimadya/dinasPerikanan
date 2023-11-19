@@ -9,6 +9,7 @@ use App\Models\Pengaduan;
 use App\Models\Pengumuman;
 use App\Models\Ppid;
 use App\Models\Profil;
+use App\Models\Sss;
 use App\Models\Survei;
 use App\Models\VideoKegiatan;
 use Illuminate\Http\Request;
@@ -169,6 +170,21 @@ class UserController extends Controller
         $video = VideoKegiatan::latest()->get();
 
         return view('User.video', compact('video'));
+    }
+
+    // informasi sedia setiap saat
+    public function informasiSss()
+    {
+        $sss = Sss::latest()->get();
+
+        return view('User.informasi.sss.sss', compact('sss'));
+    }
+    public function detailSss($id)
+    {
+        $sss = Sss::where('id', $id)->firstOrFail();
+
+        $sssLain = Berita::where('id', '!=', $id)->latest()->get();
+        return view('User.informasi.sss.detail', compact('sss', 'sssLain'));
     }
 
     public function kontak()

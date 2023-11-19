@@ -69,6 +69,11 @@ Route::get('/hak-kewajiban', [UserController::class, 'hakKewajiban']);
 Route::get('/tentang-ppid', [UserController::class, 'tentang']);
 
 
+//infromasi
+// sedia setiap saat 
+Route::get('/sedia-setiap-saat', [UserController::class, 'informasiSss']);
+Route::get('/sedia-setiap-saat/detail/{id}', [UserController::class, 'detailSss']);
+
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);

@@ -65,7 +65,7 @@
                                   <li><a href="#">Daftar Informasi</a></li>
                               </ul>
                           </li>
-                          <li><a href="#">Informasi Sedia Setiap Saat</a></li>
+                          <li><a href="{{ url('/sedia-setiap-saat') }}">Informasi Sedia Setiap Saat</a></li>
                       </ul>
                   </li>
                   <li><a class="nav-link scrollto {{ $title == 'Kontak' ? 'active' : '' }}"
