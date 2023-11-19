@@ -108,7 +108,7 @@
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                         <div data-bs-toggle="modal" data-bs-target="#exampleModal2" class="text-center">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title text-center"><a href="#">Survei</a></h4>
+                            <h4 class="title text-center"><a>Survei</a></h4>
                             <p class="description text-center">Fitur Layanan Survei Kepuasan kepada Dinas Kelautan &
                                 Perikanan</p>
                         </div>
@@ -133,17 +133,17 @@
                                                 <label for="nama_responden" class="form-label">Nama
                                                 </label>
                                                 <input type="text" class="form-control" name="nama_responden"
-                                                    id="nama" placeholder="Masukkan Nama ">
+                                                    id="nama" placeholder="Masukkan Nama" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="no_telp" class="form-label">No
                                                     Telp/Wa</label>
                                                 <input type="number" class="form-control" name="no_telp" id="no_telp"
-                                                    placeholder="Masukkan No Telp/Wa">
+                                                    placeholder="Masukkan No Telp/Wa" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="penilaian_kepuasan" class="form-label">Penilaian 1-100</label>
-                                                <input type="range" class="form-range" name="penilaian_kepuasan"
+                                                <input type="range" class="form-range" name="penilaian_kepuasan" required
                                                     id="penilaian_kepuasan" placeholder="Masukkan Penilaian 1-100"
                                                     min="1" max="100">
                                                 <output for="penilaian_kepuasan"
@@ -164,7 +164,7 @@
 
                                         <div class="mb-3">
                                             <label for="keterangan" class="form-label">Keterangan </label>
-                                            <textarea name="keterangan" id="editor2" style="height: 100px; color:#000;"></textarea>
+                                            <textarea name="keterangan" id="editor2" required style="height: 100px; color:#000;"></textarea>
                                         </div>
 
                                     </div>

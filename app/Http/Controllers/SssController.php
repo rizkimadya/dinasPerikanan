@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Sss;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SssController extends Controller
 {
@@ -44,7 +45,7 @@ class SssController extends Controller
         }
 
         $sss->save();
-        // Alert::success('Success', 'Berhasil menambah sss');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/sss');
     }
 
@@ -80,7 +81,7 @@ class SssController extends Controller
         }
 
         $sss->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate sss');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/sss');
     }
 
@@ -94,7 +95,7 @@ class SssController extends Controller
         }
 
         $sss->delete();
-        // Alert::success('Success', 'Berhasil menghapus sss');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/sss');
     }
     // akhir sss

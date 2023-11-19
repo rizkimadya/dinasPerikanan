@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AlbumKegiatan;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AlbumKegiatanController extends Controller
 {
@@ -39,7 +40,7 @@ class AlbumKegiatanController extends Controller
         ]);
 
         $album->save();
-        // Alert::success('Success', 'Berhasil menambah album');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/album');
     }
 
@@ -84,6 +85,7 @@ class AlbumKegiatanController extends Controller
         }
 
         $album->update($data);
+        Alert::success('Success', 'Berhasil mengupdate data');
 
         return redirect('/admin/album');
     }
@@ -101,6 +103,7 @@ class AlbumKegiatanController extends Controller
         }
 
         $album->delete();
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/album');
     }
 }

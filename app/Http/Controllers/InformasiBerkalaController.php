@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\InformasiBerkala;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class InformasiBerkalaController extends Controller
 {
@@ -45,7 +46,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->save();
-        // Alert::success('Success', 'Berhasil menambah informasiBerkala');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/rpjmd');
     }
 
@@ -81,7 +82,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate informasiBerkala');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/rpjmd');
     }
 
@@ -95,7 +96,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->delete();
-        // Alert::success('Success', 'Berhasil menghapus informasiBerkala');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/rpjmd');
     }
     // akhir rpjmd
@@ -138,7 +139,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->save();
-        // Alert::success('Success', 'Berhasil menambah informasiBerkala');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/renstra');
     }
 
@@ -174,7 +175,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate informasiBerkala');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/renstra');
     }
 
@@ -188,7 +189,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->delete();
-        // Alert::success('Success', 'Berhasil menghapus informasiBerkala');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/renstra');
     }
     // akhir renstra
@@ -231,7 +232,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->save();
-        // Alert::success('Success', 'Berhasil menambah informasiBerkala');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/renja');
     }
 
@@ -267,7 +268,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate informasiBerkala');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/renja');
     }
 
@@ -281,7 +282,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->delete();
-        // Alert::success('Success', 'Berhasil menghapus informasiBerkala');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/renja');
     }
     // akhir renja
@@ -324,7 +325,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->save();
-        // Alert::success('Success', 'Berhasil menambah informasiBerkala');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/kua');
     }
 
@@ -360,7 +361,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate informasiBerkala');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/kua');
     }
 
@@ -374,7 +375,7 @@ class InformasiBerkalaController extends Controller
         }
 
         $informasiBerkala->delete();
-        // Alert::success('Success', 'Berhasil menghapus informasiBerkala');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/kua');
     }
     // akhir kua

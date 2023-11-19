@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama_responden');
             $table->string('no_telp');
             $table->string('penilaian_kepuasan');
-            $table->text('keterangan');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kontak;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KontakController extends Controller
 {
@@ -23,6 +24,7 @@ class KontakController extends Controller
         ]);
 
         $kontak->save();
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/kontak');
     }
 
@@ -31,7 +33,7 @@ class KontakController extends Controller
         $kontak = Kontak::find($id);
 
         $kontak->delete();
-        // Alert::success('Success', 'Berhasil menghapus kontak');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/kontak');
     }
 }

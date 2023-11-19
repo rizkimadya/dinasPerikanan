@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pejabat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PejabatController extends Controller
 {
@@ -37,7 +38,7 @@ class PejabatController extends Controller
         }
 
         $pejabat->save();
-        // Alert::success('Success', 'Berhasil menambah pejabat');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/pejabat');
     }
 
@@ -73,7 +74,7 @@ class PejabatController extends Controller
         }
 
         $pejabat->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate pejabat');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/pejabat');
     }
 
@@ -88,7 +89,7 @@ class PejabatController extends Controller
         }
 
         $pejabat->delete();
-        // Alert::success('Success', 'Berhasil menghapus pejabat');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/pejabat');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profil;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProfilController extends Controller
 {
@@ -22,11 +23,11 @@ class ProfilController extends Controller
 
         if ($profilKami) {
             $profilKami->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate profilKami');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Profil::create($data);
-            // Alert::success('Success', 'Berhasil menambah profilKami');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/profilKami');
@@ -47,11 +48,11 @@ class ProfilController extends Controller
 
         if ($profilKami) {
             $profilKami->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate profilKami');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Profil::create($data);
-            // Alert::success('Success', 'Berhasil menambah profilKami');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/maksudTujuan');
@@ -72,11 +73,11 @@ class ProfilController extends Controller
 
         if ($profilKami) {
             $profilKami->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate profilKami');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Profil::create($data);
-            // Alert::success('Success', 'Berhasil menambah profilKami');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/tugasFungsi');
@@ -97,11 +98,11 @@ class ProfilController extends Controller
 
         if ($profilKami) {
             $profilKami->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate profilKami');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Profil::create($data);
-            // Alert::success('Success', 'Berhasil menambah profilKami');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/maklumatPelayanan');
@@ -122,11 +123,11 @@ class ProfilController extends Controller
 
         if ($profilKami) {
             $profilKami->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate profilKami');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Profil::create($data);
-            // Alert::success('Success', 'Berhasil menambah profilKami');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/tentangKami');

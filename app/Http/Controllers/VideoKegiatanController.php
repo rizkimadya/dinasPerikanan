@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\VideoKegiatan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class VideoKegiatanController extends Controller
 {
@@ -28,7 +29,7 @@ class VideoKegiatanController extends Controller
         ]);
 
         $video->save();
-        // Alert::success('Success', 'Berhasil menambah video');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/video');
     }
 
@@ -49,6 +50,7 @@ class VideoKegiatanController extends Controller
 
         $video->update($data);
 
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/video');
     }
 
@@ -57,6 +59,7 @@ class VideoKegiatanController extends Controller
         $video = VideoKegiatan::findOrFail($id);
 
         $video->delete();
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/video');
     }
 }

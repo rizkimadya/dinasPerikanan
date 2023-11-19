@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ppid;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PpidController extends Controller
 {
@@ -22,11 +23,11 @@ class PpidController extends Controller
 
         if ($visiMisi) {
             $visiMisi->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate visiMisi');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Ppid::create($data);
-            // Alert::success('Success', 'Berhasil menambah visiMisi');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/visiMisi');
@@ -47,11 +48,11 @@ class PpidController extends Controller
 
         if ($ppid) {
             $ppid->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate ppid');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Ppid::create($data);
-            // Alert::success('Success', 'Berhasil menambah ppid');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/maksudTujuan');
@@ -72,11 +73,11 @@ class PpidController extends Controller
 
         if ($ppid) {
             $ppid->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate ppid');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Ppid::create($data);
-            // Alert::success('Success', 'Berhasil menambah ppid');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/tugasFungsiPpid');
@@ -97,11 +98,11 @@ class PpidController extends Controller
 
         if ($ppid) {
             $ppid->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate ppid');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Ppid::create($data);
-            // Alert::success('Success', 'Berhasil menambah ppid');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/maklumat');
@@ -122,11 +123,11 @@ class PpidController extends Controller
 
         if ($ppid) {
             $ppid->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate ppid');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Ppid::create($data);
-            // Alert::success('Success', 'Berhasil menambah ppid');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/hakKewajiban');
@@ -147,11 +148,11 @@ class PpidController extends Controller
 
         if ($ppid) {
             $ppid->update($data);
-            // Alert::success('Success', 'Berhasil mengupdate ppid');
+            Alert::success('Success', 'Berhasil mengupdate data');
         } else {
             $data['kategori'] = $kategori;
             Ppid::create($data);
-            // Alert::success('Success', 'Berhasil menambah ppid');
+            Alert::success('Success', 'Berhasil menambah data');
         }
 
         return redirect('/admin/tentang');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Berita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BeritaController extends Controller
 {
@@ -55,7 +56,7 @@ class BeritaController extends Controller
         }
 
         $berita->save();
-        // Alert::success('Success', 'Berhasil menambah berita');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/berita');
     }
 
@@ -91,7 +92,7 @@ class BeritaController extends Controller
         }
 
         $berita->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate berita');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/berita');
     }
 
@@ -106,7 +107,7 @@ class BeritaController extends Controller
         }
 
         $berita->delete();
-        // Alert::success('Success', 'Berhasil menghapus berita');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/berita');
     }
 }

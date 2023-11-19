@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\SertaMerta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SertaMertaController extends Controller
 {
@@ -45,7 +46,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->save();
-        // Alert::success('Success', 'Berhasil menambah sertaMerta');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/sop');
     }
 
@@ -81,7 +82,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate sertaMerta');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/sop');
     }
 
@@ -95,7 +96,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->delete();
-        // Alert::success('Success', 'Berhasil menghapus sertaMerta');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/sop');
     }
     // akhir sop
@@ -138,7 +139,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->save();
-        // Alert::success('Success', 'Berhasil menambah sertaMerta');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/tcpi');
     }
 
@@ -174,7 +175,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate sertaMerta');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/tcpi');
     }
 
@@ -188,7 +189,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->delete();
-        // Alert::success('Success', 'Berhasil menghapus sertaMerta');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/tcpi');
     }
     // akhir tcpi
@@ -231,7 +232,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->save();
-        // Alert::success('Success', 'Berhasil menambah sertaMerta');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/fpi');
     }
 
@@ -267,7 +268,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate sertaMerta');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/fpi');
     }
 
@@ -281,7 +282,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->delete();
-        // Alert::success('Success', 'Berhasil menghapus sertaMerta');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/fpi');
     }
     // akhir fpi
@@ -325,7 +326,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->save();
-        // Alert::success('Success', 'Berhasil menambah sertaMerta');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/di');
     }
 
@@ -361,7 +362,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate sertaMerta');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/di');
     }
 
@@ -375,7 +376,7 @@ class SertaMertaController extends Controller
         }
 
         $sertaMerta->delete();
-        // Alert::success('Success', 'Berhasil menghapus sertaMerta');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/di');
     }
     // akhir di

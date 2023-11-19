@@ -60,6 +60,7 @@
     @include('LayoutUser.navbar')
 
     <main id="main">
+        @include('sweetalert::alert')
 
         @yield('content')
 

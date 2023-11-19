@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PengaduanController extends Controller
 {
@@ -57,7 +58,7 @@ class PengaduanController extends Controller
         }
 
         $pengaduan->save();
-        // Alert::success('Success', 'Berhasil menambah pengaduan');
+        Alert::success('Success', 'Berhasil mengirim pengaduan');
         return redirect('/');
     }
 
@@ -93,7 +94,7 @@ class PengaduanController extends Controller
         }
 
         $pengaduan->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate pengaduan');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/pengaduan');
     }
 
@@ -108,7 +109,7 @@ class PengaduanController extends Controller
         }
 
         $pengaduan->delete();
-        // Alert::success('Success', 'Berhasil menghapus pengaduan');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/pengaduan');
     }
 }

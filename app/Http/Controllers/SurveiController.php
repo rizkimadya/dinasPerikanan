@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Survei;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SurveiController extends Controller
 {
@@ -23,7 +24,7 @@ class SurveiController extends Controller
         ]);
 
         $survei->save();
-        // Alert::success('Success', 'Berhasil menambah survei');
+        Alert::success('Success', 'Berhasil mengirim survei');
         return redirect('/');
     }
 
@@ -42,6 +43,7 @@ class SurveiController extends Controller
 
         $survei->update($data);
 
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/survei');
     }
 
@@ -50,6 +52,7 @@ class SurveiController extends Controller
         $survei = Survei::findOrFail($id);
 
         $survei->delete();
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/survei');
     }
 }

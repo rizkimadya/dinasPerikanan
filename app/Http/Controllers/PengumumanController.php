@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PengumumanController extends Controller
 {
@@ -37,7 +38,7 @@ class PengumumanController extends Controller
         }
 
         $pengumuman->save();
-        // Alert::success('Success', 'Berhasil menambah pengumuman');
+        Alert::success('Success', 'Berhasil menambah data');
         return redirect('/admin/pengumuman');
     }
 
@@ -73,7 +74,7 @@ class PengumumanController extends Controller
         }
 
         $pengumuman->update($data);
-        // Alert::success('Success', 'Berhasil mengupdate pengumuman');
+        Alert::success('Success', 'Berhasil mengupdate data');
         return redirect('/admin/pengumuman');
     }
 
@@ -88,7 +89,7 @@ class PengumumanController extends Controller
         }
 
         $pengumuman->delete();
-        // Alert::success('Success', 'Berhasil menghapus pengumuman');
+        Alert::success('Success', 'Berhasil menghapus data');
         return redirect('/admin/pengumuman');
     }
 }
