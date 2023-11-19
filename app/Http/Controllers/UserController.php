@@ -10,6 +10,7 @@ use App\Models\Pengaduan;
 use App\Models\Pengumuman;
 use App\Models\Ppid;
 use App\Models\Profil;
+use App\Models\SertaMerta;
 use App\Models\Sss;
 use App\Models\Survei;
 use App\Models\VideoKegiatan;
@@ -228,6 +229,64 @@ class UserController extends Controller
         $kuaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'kua')->latest()->get();
 
         return view('user.informasi.berkala.kua.detail', compact('kua', 'kuaLain'));
+    }
+
+
+    // informasi serta merta
+    public function sop()
+    {
+        $sop = SertaMerta::where('kategori_serta_merta', 'sop')->get();
+        return view('user.informasi.sertaMerta.sop.index', compact('sop'));
+    }
+    public function detailSop($id)
+    {
+        $sop = SertaMerta::where('id', $id)->firstOrFail();
+
+        $sopLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'sop')->latest()->get();
+
+        return view('user.informasi.sertaMerta.sop.detail', compact('sop', 'sopLain'));
+    }
+
+    public function tcpi()
+    {
+        $tcpi = SertaMerta::where('kategori_serta_merta', 'tcpi')->get();
+        return view('user.informasi.sertaMerta.tcpi.index', compact('tcpi'));
+    }
+    public function detailTcpi($id)
+    {
+        $tcpi = SertaMerta::where('id', $id)->firstOrFail();
+
+        $tcpiLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'tcpi')->latest()->get();
+
+        return view('user.informasi.sertaMerta.tcpi.detail', compact('tcpi', 'tcpiLain'));
+    }
+
+    public function fpi()
+    {
+        $fpi = SertaMerta::where('kategori_serta_merta', 'fpi')->get();
+        return view('user.informasi.sertaMerta.fpi.index', compact('fpi'));
+    }
+    public function detailFpi($id)
+    {
+        $fpi = SertaMerta::where('id', $id)->firstOrFail();
+
+        $fpiLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'fpi')->latest()->get();
+
+        return view('user.informasi.sertaMerta.fpi.detail', compact('fpi', 'fpiLain'));
+    }
+
+    public function di()
+    {
+        $di = SertaMerta::where('kategori_serta_merta', 'di')->get();
+        return view('user.informasi.sertaMerta.di.index', compact('di'));
+    }
+    public function detailDi($id)
+    {
+        $di = SertaMerta::where('id', $id)->firstOrFail();
+
+        $diLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'di')->latest()->get();
+
+        return view('user.informasi.sertaMerta.di.detail', compact('di', 'diLain'));
     }
 
     // informasi sedia setiap saat

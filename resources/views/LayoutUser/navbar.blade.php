@@ -59,10 +59,10 @@
                           <li class="dropdown"><a href="#"><span>Informasi Serta Merta</span> <i
                                       class="bi bi-chevron-right"></i></a>
                               <ul>
-                                  <li><a href="#">Standar Operasional Prosedur</a></li>
-                                  <li><a href="#">Tata Cara Permohonan Informasi</a></li>
-                                  <li><a href="#">Formulir Permohonan Informasi</a></li>
-                                  <li><a href="#">Daftar Informasi</a></li>
+                                  <li><a href="{{ url('/standar-operasional-prosedur') }}">Standar Operasional Prosedur</a></li>
+                                  <li><a href="{{ url('/tata-cara-permohonan-informasi') }}">Tata Cara Permohonan Informasi</a></li>
+                                  <li><a href="{{ url('/formulir-permohonan-informasi') }}">Formulir Permohonan Informasi</a></li>
+                                  <li><a href="{{ url('/daftar-informasi') }}">Daftar Informasi</a></li>
                               </ul>
                           </li>
                           <li><a href="{{ url('/sedia-setiap-saat') }}">Informasi Sedia Setiap Saat</a></li>

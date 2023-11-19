@@ -87,6 +87,20 @@ Route::get('/rencana-kerja/detail/{id}', [UserController::class, 'detailRenja'])
 Route::get('/kebijakan-umum', [UserController::class, 'kua']);
 Route::get('/kebijakan-umum/detail/{id}', [UserController::class, 'detailKua']);
 
+// serta merta
+Route::get('/standar-operasional-prosedur', [UserController::class, 'sop']);
+Route::get('/standar-operasional-prosedur/detail/{id}', [UserController::class, 'detailSop']);
+
+Route::get('/tata-cara-permohonan-informasi', [UserController::class, 'tcpi']);
+Route::get('/tata-cara-permohonan-informasi/detail/{id}', [UserController::class, 'detailTcpi']);
+
+Route::get('/formulir-permohonan-informasi', [UserController::class, 'fpi']);
+Route::get('/formulir-permohonan-informasi/detail/{id}', [UserController::class, 'detailFpi']);
+
+Route::get('/daftar-informasi', [UserController::class, 'di']);
+Route::get('/daftar-informasi/detail/{id}', [UserController::class, 'detailDi']);
+
+
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);
