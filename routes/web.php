@@ -74,6 +74,19 @@ Route::get('/tentang-ppid', [UserController::class, 'tentang']);
 Route::get('/sedia-setiap-saat', [UserController::class, 'informasiSss']);
 Route::get('/sedia-setiap-saat/detail/{id}', [UserController::class, 'detailSss']);
 
+// berkala
+Route::get('/rencana-pembangunan', [UserController::class, 'rpjmd']);
+Route::get('/rencana-pembangunan/detail/{id}', [UserController::class, 'detailRpjmd']);
+
+Route::get('/rencana-strategis', [UserController::class, 'renstra']);
+Route::get('/rencana-strategis/detail/{id}', [UserController::class, 'detailRenstra']);
+
+Route::get('/rencana-kerja', [UserController::class, 'renja']);
+Route::get('/rencana-kerja/detail/{id}', [UserController::class, 'detailRenja']);
+
+Route::get('/kebijakan-umum', [UserController::class, 'kua']);
+Route::get('/kebijakan-umum/detail/{id}', [UserController::class, 'detailKua']);
+
 Route::get('/kontak', [UserController::class, 'kontak']);
 Route::post('/kontak', [KontakController::class, 'store']);
 Route::post('/pengaduan', [PengaduanController::class, 'store']);

@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p>{!! $tentangKami->isi !!}</p>
+                    <p>{!! optional($tentangKami)->isi !!}</p>
                 </div>
             </div>
         </div>

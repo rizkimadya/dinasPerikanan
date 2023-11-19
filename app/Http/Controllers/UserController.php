@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AlbumKegiatan;
 use App\Models\Berita;
+use App\Models\InformasiBerkala;
 use App\Models\Pejabat;
 use App\Models\Pengaduan;
 use App\Models\Pengumuman;
@@ -172,6 +173,63 @@ class UserController extends Controller
         return view('User.video', compact('video'));
     }
 
+    // informasi berkala
+    public function rpjmd()
+    {
+        $rpjmd = InformasiBerkala::where('kategori_informasi_berkala', 'rpjmd')->get();
+        return view('user.informasi.berkala.rpjmd.index', compact('rpjmd'));
+    }
+    public function detailRpjmd($id)
+    {
+        $rpjmd = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $rpjmdLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'rpjmd')->latest()->get();
+
+        return view('user.informasi.berkala.rpjmd.detail', compact('rpjmd', 'rpjmdLain'));
+    }
+
+    public function renstra()
+    {
+        $renstra = InformasiBerkala::where('kategori_informasi_berkala', 'renstra')->get();
+        return view('user.informasi.berkala.renstra.index', compact('renstra'));
+    }
+    public function detailRenstra($id)
+    {
+        $renstra = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $renstraLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'renstra')->latest()->get();
+
+        return view('user.informasi.berkala.renstra.detail', compact('renstra', 'renstraLain'));
+    }
+
+    public function renja()
+    {
+        $renja = InformasiBerkala::where('kategori_informasi_berkala', 'renja')->get();
+        return view('user.informasi.berkala.renja.index', compact('renja'));
+    }
+    public function detailRenja($id)
+    {
+        $renja = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $renjaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'renja')->latest()->get();
+
+        return view('user.informasi.berkala.renja.detail', compact('renja', 'renjaLain'));
+    }
+
+    public function kua()
+    {
+        $kua = InformasiBerkala::where('kategori_informasi_berkala', 'kua')->get();
+        return view('user.informasi.berkala.kua.index', compact('kua'));
+    }
+    public function detailKua($id)
+    {
+        $kua = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $kuaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'kua')->latest()->get();
+
+        return view('user.informasi.berkala.kua.detail', compact('kua', 'kuaLain'));
+    }
+
     // informasi sedia setiap saat
     public function informasiSss()
     {
@@ -183,7 +241,7 @@ class UserController extends Controller
     {
         $sss = Sss::where('id', $id)->firstOrFail();
 
-        $sssLain = Berita::where('id', '!=', $id)->latest()->get();
+        $sssLain = Sss::where('id', '!=', $id)->latest()->get();
         return view('User.informasi.sss.detail', compact('sss', 'sssLain'));
     }
 

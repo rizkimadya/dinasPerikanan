@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p>{!! $visiMisi->isi !!}</p>
+                    <p>{!! optional($visiMisi)->isi !!}</p>
                 </div>
             </div>
         </div>

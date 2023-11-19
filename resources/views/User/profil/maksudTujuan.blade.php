@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p>{!! $maksudTujuan->isi !!}</p>
+                    <p>{!! optional($maksudTujuan)->isi !!}</p>
                 </div>
             </div>
         </div>

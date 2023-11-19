@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p>{!! $profil->isi !!}</p>
+                    <p>{!! optional($profil)->isi !!}</p>
                 </div>
             </div>
         </div>

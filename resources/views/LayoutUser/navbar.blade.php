@@ -50,10 +50,10 @@
                           <li class="dropdown"><a href="#"><span>Informasi Berkala</span> <i
                                       class="bi bi-chevron-right"></i></a>
                               <ul>
-                                  <li><a href="#">Rencana Pembangunan <br> Jangka Menengah Daerah</a></li>
-                                  <li><a href="#">Rencana Strategis</a></li>
-                                  <li><a href="#">Rencana Kerja</a></li>
-                                  <li><a href="#">Kebijakan Umum APBD</a></li>
+                                  <li><a href="{{ url('/rencana-pembangunan') }}">Rencana Pembangunan <br> Jangka Menengah Daerah</a></li>
+                                  <li><a href="{{ url('/rencana-strategis') }}">Rencana Strategis</a></li>
+                                  <li><a href="{{ url('/rencana-kerja') }}">Rencana Kerja</a></li>
+                                  <li><a href="{{ url('/kebijakan-umum') }}">Kebijakan Umum APBD</a></li>
                               </ul>
                           </li>
                           <li class="dropdown"><a href="#"><span>Informasi Serta Merta</span> <i

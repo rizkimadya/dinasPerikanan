@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p>{!! $hakKewajiban->isi !!}</p>
+                    <p>{!! optional($hakKewajiban)->isi !!}</p>
                 </div>
             </div>
         </div>
