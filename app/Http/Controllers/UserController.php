@@ -178,7 +178,7 @@ class UserController extends Controller
     public function rpjmd()
     {
         $rpjmd = InformasiBerkala::where('kategori_informasi_berkala', 'rpjmd')->get();
-        return view('user.informasi.berkala.rpjmd.index', compact('rpjmd'));
+        return view('User.informasi.berkala.rpjmd.index', compact('rpjmd'));
     }
     public function detailRpjmd($id)
     {
@@ -186,13 +186,13 @@ class UserController extends Controller
 
         $rpjmdLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'rpjmd')->latest()->get();
 
-        return view('user.informasi.berkala.rpjmd.detail', compact('rpjmd', 'rpjmdLain'));
+        return view('User.informasi.berkala.rpjmd.detail', compact('rpjmd', 'rpjmdLain'));
     }
 
     public function renstra()
     {
         $renstra = InformasiBerkala::where('kategori_informasi_berkala', 'renstra')->get();
-        return view('user.informasi.berkala.renstra.index', compact('renstra'));
+        return view('User.informasi.berkala.renstra.index', compact('renstra'));
     }
     public function detailRenstra($id)
     {
@@ -200,13 +200,13 @@ class UserController extends Controller
 
         $renstraLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'renstra')->latest()->get();
 
-        return view('user.informasi.berkala.renstra.detail', compact('renstra', 'renstraLain'));
+        return view('User.informasi.berkala.renstra.detail', compact('renstra', 'renstraLain'));
     }
 
     public function renja()
     {
         $renja = InformasiBerkala::where('kategori_informasi_berkala', 'renja')->get();
-        return view('user.informasi.berkala.renja.index', compact('renja'));
+        return view('User.informasi.berkala.renja.index', compact('renja'));
     }
     public function detailRenja($id)
     {
@@ -214,13 +214,13 @@ class UserController extends Controller
 
         $renjaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'renja')->latest()->get();
 
-        return view('user.informasi.berkala.renja.detail', compact('renja', 'renjaLain'));
+        return view('User.informasi.berkala.renja.detail', compact('renja', 'renjaLain'));
     }
 
     public function kua()
     {
         $kua = InformasiBerkala::where('kategori_informasi_berkala', 'kua')->get();
-        return view('user.informasi.berkala.kua.index', compact('kua'));
+        return view('User.informasi.berkala.kua.index', compact('kua'));
     }
     public function detailKua($id)
     {
@@ -228,7 +228,7 @@ class UserController extends Controller
 
         $kuaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'kua')->latest()->get();
 
-        return view('user.informasi.berkala.kua.detail', compact('kua', 'kuaLain'));
+        return view('User.informasi.berkala.kua.detail', compact('kua', 'kuaLain'));
     }
 
 
@@ -236,7 +236,7 @@ class UserController extends Controller
     public function sop()
     {
         $sop = SertaMerta::where('kategori_serta_merta', 'sop')->get();
-        return view('user.informasi.sertaMerta.sop.index', compact('sop'));
+        return view('User.informasi.sertaMerta.sop.index', compact('sop'));
     }
     public function detailSop($id)
     {
@@ -244,13 +244,13 @@ class UserController extends Controller
 
         $sopLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'sop')->latest()->get();
 
-        return view('user.informasi.sertaMerta.sop.detail', compact('sop', 'sopLain'));
+        return view('User.informasi.sertaMerta.sop.detail', compact('sop', 'sopLain'));
     }
 
     public function tcpi()
     {
         $tcpi = SertaMerta::where('kategori_serta_merta', 'tcpi')->get();
-        return view('user.informasi.sertaMerta.tcpi.index', compact('tcpi'));
+        return view('User.informasi.sertaMerta.tcpi.index', compact('tcpi'));
     }
     public function detailTcpi($id)
     {
@@ -258,13 +258,13 @@ class UserController extends Controller
 
         $tcpiLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'tcpi')->latest()->get();
 
-        return view('user.informasi.sertaMerta.tcpi.detail', compact('tcpi', 'tcpiLain'));
+        return view('User.informasi.sertaMerta.tcpi.detail', compact('tcpi', 'tcpiLain'));
     }
 
     public function fpi()
     {
         $fpi = SertaMerta::where('kategori_serta_merta', 'fpi')->get();
-        return view('user.informasi.sertaMerta.fpi.index', compact('fpi'));
+        return view('User.informasi.sertaMerta.fpi.index', compact('fpi'));
     }
     public function detailFpi($id)
     {
@@ -272,13 +272,13 @@ class UserController extends Controller
 
         $fpiLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'fpi')->latest()->get();
 
-        return view('user.informasi.sertaMerta.fpi.detail', compact('fpi', 'fpiLain'));
+        return view('User.informasi.sertaMerta.fpi.detail', compact('fpi', 'fpiLain'));
     }
 
     public function di()
     {
         $di = SertaMerta::where('kategori_serta_merta', 'di')->get();
-        return view('user.informasi.sertaMerta.di.index', compact('di'));
+        return view('User.informasi.sertaMerta.di.index', compact('di'));
     }
     public function detailDi($id)
     {
@@ -286,7 +286,7 @@ class UserController extends Controller
 
         $diLain = SertaMerta::where('id', '!=', $id)->where('kategori_serta_merta', 'di')->latest()->get();
 
-        return view('user.informasi.sertaMerta.di.detail', compact('di', 'diLain'));
+        return view('User.informasi.sertaMerta.di.detail', compact('di', 'diLain'));
     }
 
     // informasi sedia setiap saat

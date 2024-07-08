@@ -20,4 +20,9 @@
             </div>
         </div>
     </section>
+    <style>
+        #tentangKami img {
+            width: 100%;
+        }
+    </style>
 @endsection
