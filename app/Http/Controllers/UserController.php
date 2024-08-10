@@ -102,11 +102,11 @@ class UserController extends Controller
     }
 
     // tentang kami
-    public function tentangKami()
+    public function profilVisiMisi()
     {
-        $tentangKami = Profil::where('kategori', 'tentangKami')->first();
+        $profilVisiMisi = Profil::where('kategori', 'profilVisiMisi')->first();
 
-        return  view('User.profil.tentangKami', compact('tentangKami'));
+        return  view('User.profil.profilVisiMisi', compact('profilVisiMisi'));
     }
 
     // visi misi

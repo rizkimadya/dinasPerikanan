@@ -108,16 +108,16 @@ class ProfilController extends Controller
         return redirect('/admin/maklumatPelayanan');
     }
 
-    public function tentangKami()
+    public function profilVisiMisi()
     {
-        $tentangKami = Profil::where('kategori', 'tentangKami')->first();
-        return view('Admin.profil.tentangKami.index', compact('tentangKami'));
+        $profilVisiMisi = Profil::where('kategori', 'profilVisiMisi')->first();
+        return view('Admin.profil.profilVisiMisi.index', compact('profilVisiMisi'));
     }
 
-    public function storeOrUpdaTetentangKami(Request $request)
+    public function storeOrUpdateProfilVisiMisi(Request $request)
     {
         $data = $request->all();
-        $kategori = 'tentangKami';
+        $kategori = 'profilVisiMisi';
 
         $profilKami = Profil::where('kategori', $kategori)->first();
 
@@ -130,6 +130,6 @@ class ProfilController extends Controller
             Alert::success('Success', 'Berhasil menambah data');
         }
 
-        return redirect('/admin/tentangKami');
+        return redirect('/admin/profil/visiMisi');
     }
 }

@@ -129,7 +129,7 @@
                             <!--end:Menu sub-->
                         </div>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion  {{ $title == 'Profil Pejabat' ? 'here show' : '' }} {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Maksud & Tujuan' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Tentang Kami' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion  {{ $title == 'Profil Pejabat' ? 'here show' : '' }} {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Visi Misi' ? 'here show' : '' }} {{ $title == 'Struktur Organisasi' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Visi Misi' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -208,17 +208,17 @@
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
-                                {{-- <div class="menu-item">
+                                <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link {{ $title == 'Tentang Kami' ? 'active' : '' }}"
-                                        href="{{ url('/admin/tentangKami') }}">
+                                    <a class="menu-link {{ $title == 'Visi Misi' ? 'active' : '' }}"
+                                        href="{{ url('/admin/profil/visiMisi') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Tentang Kami</span>
+                                        <span class="menu-title">Visi Misi</span>
                                     </a>
                                     <!--end:Menu link-->
-                                </div> --}}
+                                </div>
                                 <!--end:Menu item-->
                             </div>
                             <!--end:Menu sub-->

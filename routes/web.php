@@ -51,8 +51,8 @@ Route::get('/maksud-tujuan', [UserController::class, 'maksudTujuan']);
 Route::get('/tugas-fungsi', [UserController::class, 'tugasFungsi']);
 // maklumat pelayanan
 Route::get('/maklumat-pelayanan', [UserController::class, 'maklumatPelayanan']);
-// tentang kami
-Route::get('/tentang-kami', [UserController::class, 'tentangKami']);
+// visi misi
+Route::get('/profil/visi-misi', [UserController::class, 'profilVisiMisi']);
 
 
 // visi misi
@@ -70,7 +70,7 @@ Route::get('/tentang-ppid', [UserController::class, 'tentang']);
 
 
 //infromasi
-// sedia setiap saat 
+// sedia setiap saat
 Route::get('/sedia-setiap-saat', [UserController::class, 'informasiSss']);
 Route::get('/sedia-setiap-saat/detail/{id}', [UserController::class, 'detailSss']);
 
@@ -156,9 +156,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/maklumatPelayanan', [ProfilController::class, 'maklumatPelayanan']);
     Route::post('/admin/maklumatPelayanan', [ProfilController::class, 'storeOrUpdateMaklumatPelayanan']);
 
-    // tentang kami
-    Route::get('/admin/tentangKami', [ProfilController::class, 'tentangKami']);
-    Route::post('/admin/tentangKami', [ProfilController::class, 'storeOrUpdateTentangKami']);
+    // visi misi profil
+    Route::get('/admin/profil/visiMisi', [ProfilController::class, 'profilVisiMisi']);
+    Route::post('/admin/profil/visiMisi', [ProfilController::class, 'storeOrUpdateProfilVisiMisi']);
 
     // visi misi
     Route::get('/admin/visiMisi', [PpidController::class, 'visiMisi']);
@@ -176,7 +176,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/hakKewajiban', [PpidController::class, 'hakKewajiban']);
     Route::post('/admin/hakKewajiban', [PpidController::class, 'storeOrUpdateHakKewajiban']);
 
-    // tentang 
+    // tentang
     Route::get('/admin/tentang', [PpidController::class, 'tentang']);
     Route::post('/admin/tentang', [PpidController::class, 'storeOrUpdateTentang']);
 
