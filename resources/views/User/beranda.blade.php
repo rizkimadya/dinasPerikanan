@@ -266,7 +266,7 @@
     </section><!-- End Counts Section -->
 
 
-    <!-- ======= Pengumuman Section ======= -->
+    {{-- <!-- ======= Pengumuman Section ======= -->
     <section id="services" class="services section-bg">
         <div class="container" data-aos="fade-up">
 
@@ -297,5 +297,5 @@
                     Semua</a>
             </div>
         </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Services Section --> --}}
 @endsection

@@ -149,20 +149,20 @@ class UserController extends Controller
         return  view('User.ppid.maklumat', compact('maklumat'));
     }
 
-    // hakKewajiban
-    public function hakKewajiban()
+    // profilSingkat
+    public function profilSingkat()
     {
-        $hakKewajiban = Ppid::where('kategori', 'hakKewajiban')->first();
+        $profilSingkat = Ppid::where('kategori', 'profilSingkat')->first();
 
-        return  view('User.ppid.hakKewajiban', compact('hakKewajiban'));
+        return  view('User.ppid.profilSingkat', compact('profilSingkat'));
     }
 
-    // tentang
-    public function tentang()
+    // strukturOrganisasiPpid
+    public function strukturOrganisasiPpid()
     {
-        $tentang = Ppid::where('kategori', 'tentang')->first();
+        $strukturOrganisasiPpid = Ppid::where('kategori', 'strukturOrganisasiPpid')->first();
 
-        return  view('User.ppid.tentang', compact('tentang'));
+        return  view('User.ppid.strukturOrganisasiPpid', compact('strukturOrganisasiPpid'));
     }
 
 

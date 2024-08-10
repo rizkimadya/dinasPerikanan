@@ -36,8 +36,8 @@
                           <li><a href="{{ url('/tugas-fungsi-ppid') }}">Tugas & Fungsi</a></li>
                           {{-- <li><a href="{{ url('/maksud-tujuan-ppid') }}">Maksud & Tujuan</a></li> --}}
                           <li><a href="{{ url('/maklumat') }}">Maklumat</a></li>
-                          {{-- <li><a href="{{ url('/hak-kewajiban') }}">Hak & Kewajiban </a></li> --}}
-                          {{-- <li><a href="{{ url('/tentang-ppid') }}">Tentang PPID</a></li> --}}
+                          <li><a href="{{ url('/profil-singkat') }}">Profil Singkat </a></li>
+                          <li><a href="{{ url('/struktur-organisasi-ppid') }}">Struktur Organisasi PPID</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i class="bi bi-chevron-down"></i></a>

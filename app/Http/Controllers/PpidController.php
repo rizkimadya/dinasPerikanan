@@ -108,16 +108,16 @@ class PpidController extends Controller
         return redirect('/admin/maklumat');
     }
 
-    public function hakKewajiban()
+    public function profilSingkat()
     {
-        $hakKewajiban = Ppid::where('kategori', 'hakKewajiban')->first();
-        return view('Admin.ppid.hakKewajiban.index', compact('hakKewajiban'));
+        $profilSingkat = Ppid::where('kategori', 'profilSingkat')->first();
+        return view('Admin.ppid.profilSingkat.index', compact('profilSingkat'));
     }
 
-    public function storeOrUpdateHakKewajiban(Request $request)
+    public function storeOrUpdateProfilSingkat(Request $request)
     {
         $data = $request->all();
-        $kategori = 'hakKewajiban';
+        $kategori = 'profilSingkat';
 
         $ppid = Ppid::where('kategori', $kategori)->first();
 
@@ -130,19 +130,19 @@ class PpidController extends Controller
             Alert::success('Success', 'Berhasil menambah data');
         }
 
-        return redirect('/admin/hakKewajiban');
+        return redirect('/admin/profilSingkat');
     }
 
-    public function tentang()
+    public function strukturOrganisasiPpid()
     {
-        $tentang = Ppid::where('kategori', 'tentang')->first();
-        return view('Admin.ppid.tentang.index', compact('tentang'));
+        $strukturOrganisasiPpid = Ppid::where('kategori', 'strukturOrganisasiPpid')->first();
+        return view('Admin.ppid.strukturOrganisasiPpid.index', compact('strukturOrganisasiPpid'));
     }
 
-    public function storeOrUpdaTetentang(Request $request)
+    public function storeOrUpdateStrukturOrganisasiPpid(Request $request)
     {
         $data = $request->all();
-        $kategori = 'tentang';
+        $kategori = 'strukturOrganisasiPpid';
 
         $ppid = Ppid::where('kategori', $kategori)->first();
 
@@ -155,6 +155,6 @@ class PpidController extends Controller
             Alert::success('Success', 'Berhasil menambah data');
         }
 
-        return redirect('/admin/tentang');
+        return redirect('/admin/strukturOrganisasiPpid');
     }
 }

@@ -235,7 +235,7 @@
                             <!--end:Menu sub-->
                         </div>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion {{ $title == 'Visi Misi PPID' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi PPID' ? 'here show' : '' }} {{ $title == 'Maklumat PPID' ? 'here show' : '' }} {{ $title == 'Hak & Kewajiban' ? 'here show' : '' }} {{ $title == 'Tentang PPID' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'Visi Misi PPID' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi PPID' ? 'here show' : '' }} {{ $title == 'Maklumat PPID' ? 'here show' : '' }} {{ $title == 'Profil Singkat' ? 'here show' : '' }} {{ $title == 'Struktur Organisasi PPID' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -281,20 +281,20 @@
                                         </span>
                                         <span class="menu-title">Maklumat</span>
                                     </a>
-                                    {{-- <a class="menu-link {{ $title == 'Hak & Kewajiban' ? 'active' : '' }}"
-                                        href="{{ url('/admin/hakKewajiban') }}">
+                                    <a class="menu-link {{ $title == 'Profil Singkat' ? 'active' : '' }}"
+                                        href="{{ url('/admin/profilSingkat') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Hak & Kewajiban</span>
-                                    </a> --}}
-                                    {{-- <a class="menu-link {{ $title == 'Tentang PPID' ? 'active' : '' }}"
-                                        href="{{ url('/admin/tentang') }}">
+                                        <span class="menu-title">Profil Singkat</span>
+                                    </a>
+                                    <a class="menu-link {{ $title == 'Struktur Organisasi PPID' ? 'active' : '' }}"
+                                        href="{{ url('/admin/strukturOrganisasiPpid') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Tentang PPID</span>
-                                    </a> --}}
+                                        <span class="menu-title">Struktur Organisasi</span>
+                                    </a>
                                     <!--end:Menu link-->
                                 </div>
                                 <!--end:Menu item-->

@@ -65,10 +65,10 @@ Route::get('/maksud-tujuan-ppid', [UserController::class, 'maksudTujuanPpid']);
 Route::get('/tugas-fungsi-ppid', [UserController::class, 'tugasFungsiPpid']);
 // maklumat
 Route::get('/maklumat', [UserController::class, 'maklumat']);
-// hakKewajiban
-Route::get('/hak-kewajiban', [UserController::class, 'hakKewajiban']);
-// tentang
-Route::get('/tentang-ppid', [UserController::class, 'tentang']);
+// profilSingkat
+Route::get('/profil-singkat', [UserController::class, 'profilSingkat']);
+// strukturOrganisasiPpid
+Route::get('/struktur-organisasi-ppid', [UserController::class, 'strukturOrganisasiPpid']);
 
 
 //infromasi
@@ -178,13 +178,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/maklumat', [PpidController::class, 'maklumat']);
     Route::post('/admin/maklumat', [PpidController::class, 'storeOrUpdateMaklumat']);
 
-    // hak kewajiban
-    Route::get('/admin/hakKewajiban', [PpidController::class, 'hakKewajiban']);
-    Route::post('/admin/hakKewajiban', [PpidController::class, 'storeOrUpdateHakKewajiban']);
+    // profil singkat
+    Route::get('/admin/profilSingkat', [PpidController::class, 'profilSingkat']);
+    Route::post('/admin/profilSingkat', [PpidController::class, 'storeOrUpdateProfilSingkat']);
 
-    // tentang
-    Route::get('/admin/tentang', [PpidController::class, 'tentang']);
-    Route::post('/admin/tentang', [PpidController::class, 'storeOrUpdateTentang']);
+    // strukturOrganisasiPpid
+    Route::get('/admin/strukturOrganisasiPpid', [PpidController::class, 'strukturOrganisasiPpid']);
+    Route::post('/admin/strukturOrganisasiPpid', [PpidController::class, 'storeOrUpdateStrukturOrganisasiPpid']);
 
     // pengumuman
     Route::get('/admin/pengumuman', [PengumumanController::class, 'index']);
