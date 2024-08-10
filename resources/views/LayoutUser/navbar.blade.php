@@ -17,8 +17,8 @@
               <ul>
                   <li><a class="nav-link scrollto {{ $title == 'Beranda' ? 'active' : '' }}"
                           href="{{ url('/') }}">Beranda</a></li>
-                  <li><a class="nav-link scrollto {{ $title == 'Pengumuman' ? 'active' : '' }}"
-                          href="{{ url('/pengumuman') }}">Pengumuman</a></li>
+                  {{-- <li><a class="nav-link scrollto {{ $title == 'Pengumuman' ? 'active' : '' }}"
+                          href="{{ url('/pengumuman') }}">Pengumuman</a></li> --}}
                   <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                       <ul>
                           <li><a href="{{ url('/profil-pejabat') }}">Profil Pejabat</a></li>
@@ -26,7 +26,7 @@
                           <li><a href="{{ url('/maksud-tujuan') }}">Maksud & Tujuan</a></li>
                           <li><a href="{{ url('/tugas-fungsi') }}">Tugas & Fungsi</a></li>
                           <li><a href="{{ url('/maklumat-pelayanan') }}">Maklumat Pelayanan</a></li>
-                          <li><a href="{{ url('/tentang-kami') }}">Tentang Kami</a></li>
+                          {{-- <li><a href="{{ url('/tentang-kami') }}">Tentang Kami</a></li> --}}
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
@@ -35,8 +35,8 @@
                           <li><a href="{{ url('/tugas-fungsi-ppid') }}">Tugas & Fungsi</a></li>
                           {{-- <li><a href="{{ url('/maksud-tujuan-ppid') }}">Maksud & Tujuan</a></li> --}}
                           <li><a href="{{ url('/maklumat') }}">Maklumat</a></li>
-                          <li><a href="{{ url('/hak-kewajiban') }}">Hak & Kewajiban </a></li>
-                          <li><a href="{{ url('/tentang-ppid') }}">Tentang PPID</a></li>
+                          {{-- <li><a href="{{ url('/hak-kewajiban') }}">Hak & Kewajiban </a></li> --}}
+                          {{-- <li><a href="{{ url('/tentang-ppid') }}">Tentang PPID</a></li> --}}
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i class="bi bi-chevron-down"></i></a>
@@ -60,12 +60,12 @@
                                       class="bi bi-chevron-right"></i></a>
                               <ul>
                                   <li><a href="{{ url('/standar-operasional-prosedur') }}">Standar Operasional Prosedur</a></li>
-                                  <li><a href="{{ url('/tata-cara-permohonan-informasi') }}">Tata Cara Permohonan Informasi</a></li>
-                                  <li><a href="{{ url('/formulir-permohonan-informasi') }}">Formulir Permohonan Informasi</a></li>
+                                  {{-- <li><a href="{{ url('/tata-cara-permohonan-informasi') }}">Tata Cara Permohonan Informasi</a></li>
+                                  <li><a href="{{ url('/formulir-permohonan-informasi') }}">Formulir Permohonan Informasi</a></li> --}}
                                   <li><a href="{{ url('/daftar-informasi') }}">Daftar Informasi</a></li>
                               </ul>
                           </li>
-                          <li><a href="{{ url('/sedia-setiap-saat') }}">Informasi Sedia Setiap Saat</a></li>
+                          {{-- <li><a href="{{ url('/sedia-setiap-saat') }}">Informasi Sedia Setiap Saat</a></li> --}}
                       </ul>
                   </li>
                   <li><a class="nav-link scrollto {{ $title == 'Kontak' ? 'active' : '' }}"

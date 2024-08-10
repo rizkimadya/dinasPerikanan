@@ -208,7 +208,7 @@
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
-                                <div class="menu-item">
+                                {{-- <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Tentang Kami' ? 'active' : '' }}"
                                         href="{{ url('/admin/tentangKami') }}">
@@ -218,7 +218,7 @@
                                         <span class="menu-title">Tentang Kami</span>
                                     </a>
                                     <!--end:Menu link-->
-                                </div>
+                                </div> --}}
                                 <!--end:Menu item-->
                             </div>
                             <!--end:Menu sub-->
@@ -270,20 +270,20 @@
                                         </span>
                                         <span class="menu-title">Maklumat</span>
                                     </a>
-                                    <a class="menu-link {{ $title == 'Hak & Kewajiban' ? 'active' : '' }}"
+                                    {{-- <a class="menu-link {{ $title == 'Hak & Kewajiban' ? 'active' : '' }}"
                                         href="{{ url('/admin/hakKewajiban') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Hak & Kewajiban</span>
-                                    </a>
-                                    <a class="menu-link {{ $title == 'Tentang PPID' ? 'active' : '' }}"
+                                    </a> --}}
+                                    {{-- <a class="menu-link {{ $title == 'Tentang PPID' ? 'active' : '' }}"
                                         href="{{ url('/admin/tentang') }}">
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Tentang PPID</span>
-                                    </a>
+                                    </a> --}}
                                     <!--end:Menu link-->
                                 </div>
                                 <!--end:Menu item-->
@@ -342,7 +342,7 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <a class="menu-link {{ $title == 'Pengumuman' ? 'active' : '' }}"
+                        {{-- <a class="menu-link {{ $title == 'Pengumuman' ? 'active' : '' }}"
                             href="{{ url('/admin/pengumuman') }}">
                             <span class="menu-icon">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -360,7 +360,7 @@
                                 <!--end::Svg Icon-->
                             </span>
                             <span class="menu-title">Pengumuman</span>
-                        </a>
+                        </a> --}}
                         <div data-kt-menu-trigger="click"
                             class="menu-item menu-accordion {{ $title == 'Pengaduan' ? 'here show' : '' }} {{ $title == 'Survei Kepuasan' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
@@ -536,7 +536,7 @@
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
-                                <div class="menu-item">
+                                {{-- <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Tata Cara Permohonan Informasi' ? 'active' : '' }}"
                                         href="{{ url('/admin/tcpi') }}">
@@ -546,9 +546,9 @@
                                         <span class="menu-title">Tata Cara Permohonan Informasi</span>
                                     </a>
                                     <!--end:Menu link-->
-                                </div>
+                                </div> --}}
                                 <!--end:Menu item-->
-                                <div class="menu-item">
+                                {{-- <div class="menu-item">
                                     <!--begin:Menu link-->
                                     <a class="menu-link {{ $title == 'Formulir Permohonan Informasi' ? 'active' : '' }}"
                                         href="{{ url('/admin/fpi') }}">
@@ -558,7 +558,7 @@
                                         <span class="menu-title">Formulir Permohonan Informasi</span>
                                     </a>
                                     <!--end:Menu link-->
-                                </div>
+                                </div> --}}
                                 <!--end:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
@@ -575,7 +575,7 @@
                             </div>
                             <!--end:Menu sub-->
                         </div>
-                        <a class="menu-link {{ $title == 'Sedia Setiap Saat' ? 'active' : '' }}"
+                        {{-- <a class="menu-link {{ $title == 'Sedia Setiap Saat' ? 'active' : '' }}"
                             href="{{ url('/admin/sss') }}">
                             <span class="menu-icon">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -594,7 +594,7 @@
                                 <!--end::Svg Icon-->
                             </span>
                             <span class="menu-title">Sedia Setiap Saat</span>
-                        </a>
+                        </a> --}}
                         {{-- <div data-kt-menu-trigger="click"
                             class="menu-item menu-accordion {{ $title == 'Undang-Undang' ? 'here show' : '' }} {{ $title == 'Peraturan Pemerintah' ? 'here show' : '' }} {{ $title == 'Peraturan Presiden' ? 'here show' : '' }} {{ $title == 'Peraturan Mentri' ? 'here show' : '' }} {{ $title == 'Keputusan Mentri' ? 'here show' : '' }} {{ $title == 'Peraturan Daerah' ? 'here show' : '' }} {{ $title == 'Peraturan Gubernur' ? 'here show' : '' }} {{ $title == 'Keputusan Gubernur' ? 'here show' : '' }} {{ $title == 'Instruktur Gubernur' ? 'here show' : '' }} {{ $title == 'Keputusan Sekretaris Daerah' ? 'here show' : '' }} {{ $title == 'Keputusan Kepala Dinas' ? 'here show' : '' }} {{ $title == 'Surat Edaran' ? 'here show' : '' }}">
                             <!--begin:Menu link-->

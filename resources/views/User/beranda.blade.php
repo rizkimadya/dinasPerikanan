@@ -164,7 +164,7 @@
 
                                         <div class="mb-3">
                                             <label for="keterangan" class="form-label">Keterangan </label>
-                                            <textarea name="keterangan" id="editor2" required style="height: 100px; color:#000;"></textarea>
+                                            <textarea name="keterangan" id="editor2" style="height: 100px; color:#000;"></textarea>
                                         </div>
 
                                     </div>
