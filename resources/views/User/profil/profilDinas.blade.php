@@ -20,4 +20,9 @@
             </div>
         </div>
     </section>
+    <style>
+        #profil img {
+            width: 300px;
+        }
+    </style>
 @endsection
