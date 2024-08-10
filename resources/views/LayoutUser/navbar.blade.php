@@ -27,6 +27,7 @@
                           <li><a href="{{ url('/tugas-fungsi') }}">Tugas & Fungsi</a></li>
                           <li><a href="{{ url('/maklumat-pelayanan') }}">Maklumat Pelayanan</a></li>
                           <li><a href="{{ url('/profil/visi-misi') }}">Visi Misi</a></li>
+                          <li><a href="{{ url('/profil/struktur-organisasi') }}">Struktur Organisasi</a></li>
                       </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>

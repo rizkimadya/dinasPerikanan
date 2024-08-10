@@ -53,6 +53,8 @@ Route::get('/tugas-fungsi', [UserController::class, 'tugasFungsi']);
 Route::get('/maklumat-pelayanan', [UserController::class, 'maklumatPelayanan']);
 // visi misi
 Route::get('/profil/visi-misi', [UserController::class, 'profilVisiMisi']);
+// visi misi
+Route::get('/profil/struktur-organisasi', [UserController::class, 'strukturOrganisasi']);
 
 
 // visi misi
@@ -159,6 +161,10 @@ Route::group(['middleware' => 'auth'], function () {
     // visi misi profil
     Route::get('/admin/profil/visiMisi', [ProfilController::class, 'profilVisiMisi']);
     Route::post('/admin/profil/visiMisi', [ProfilController::class, 'storeOrUpdateProfilVisiMisi']);
+
+    // Struktur Organisasi
+    Route::get('/admin/strukturOrganisasi', [ProfilController::class, 'StrukturOrganisasi']);
+    Route::post('/admin/strukturOrganisasi', [ProfilController::class, 'storeOrUpdateStrukturOrganisasi']);
 
     // visi misi
     Route::get('/admin/visiMisi', [PpidController::class, 'visiMisi']);
@@ -272,8 +278,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     // sss
-    Route::get('/admin/sss', [SssController::class, 'index']);
-    Route::post('/admin/sss', [SssController::class, 'store']);
+    Route::get('/admin/sss/', [SssController::class, 'index']);
+    Route::post('/admin/sss/', [SssController::class, 'store']);
     Route::get('/admin/sss/edit/{id}', [SssController::class, 'edit']);
     Route::post('/admin/sss/update/{id}', [SssController::class, 'update']);
     Route::get('/admin/sss/delete/{id}', [SssController::class, 'destroy']);

@@ -132,4 +132,29 @@ class ProfilController extends Controller
 
         return redirect('/admin/profil/visiMisi');
     }
+
+    public function strukturOrganisasi()
+    {
+        $strukturOrganisasi = Profil::where('kategori', 'strukturOrganisasi')->first();
+        return view('Admin.profil.strukturOrganisasi.index', compact('strukturOrganisasi'));
+    }
+
+    public function storeOrUpdatestrukturOrganisasi(Request $request)
+    {
+        $data = $request->all();
+        $kategori = 'strukturOrganisasi';
+
+        $profilKami = Profil::where('kategori', $kategori)->first();
+
+        if ($profilKami) {
+            $profilKami->update($data);
+            Alert::success('Success', 'Berhasil mengupdate data');
+        } else {
+            $data['kategori'] = $kategori;
+            Profil::create($data);
+            Alert::success('Success', 'Berhasil menambah data');
+        }
+
+        return redirect('/admin/strukturOrganisasi');
+    }
 }

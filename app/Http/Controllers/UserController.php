@@ -101,12 +101,20 @@ class UserController extends Controller
         return  view('User.profil.maklumatPelayanan', compact('maklumatPelayanan'));
     }
 
-    // tentang kami
+    // visi misi
     public function profilVisiMisi()
     {
         $profilVisiMisi = Profil::where('kategori', 'profilVisiMisi')->first();
 
         return  view('User.profil.profilVisiMisi', compact('profilVisiMisi'));
+    }
+
+    // struktur organisasi
+    public function strukturOrganisasi()
+    {
+        $strukturOrganisasi = Profil::where('kategori', 'strukturOrganisasi')->first();
+
+        return  view('User.profil.strukturOrganisasi', compact('strukturOrganisasi'));
     }
 
     // visi misi
