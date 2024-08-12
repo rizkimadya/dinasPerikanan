@@ -1416,4 +1416,99 @@ class InformasiBerkalaController extends Controller
          return redirect('/admin/produksiPelabuhan');
      }
      // akhir produksiPelabuhan
+
+
+
+
+     // peta
+     public function peta()
+     {
+         $peta = InformasiBerkala::where('kategori_informasi_berkala', 'peta')->get();
+         return view('Admin.informasiBerkala.peta.index', compact('peta'));
+     }
+
+     public function storePeta(Request $request)
+     {
+         $request->validate([
+             'judul_informasi_berkala' => 'required',
+             'file_informasi_berkala' => 'mimes:pdf,jpg,jpeg,png',
+         ]);
+
+         $kategori = "peta";
+
+         if ($request->has('file_informasi_berkala')) {
+             $file = $request->file('file_informasi_berkala');
+             $nama_file = $request->judul_informasi_berkala . "_" . time() . $file->getClientOriginalName();
+
+             // Simpan file ke direktori storage
+             $file->storeAs('public/fileInformasiBerkala', $nama_file);
+             $informasiBerkala = new InformasiBerkala([
+                 'kategori_informasi_berkala' => $kategori,
+                 'judul_informasi_berkala' => $request->judul_informasi_berkala,
+                 'keterangan_informasi_berkala' => $request->keterangan_informasi_berkala,
+                 'file_informasi_berkala' => $nama_file,
+             ]);
+         } else {
+             $informasiBerkala = new InformasiBerkala([
+                 'kategori_informasi_berkala' => $kategori,
+                 'judul_informasi_berkala' => $request->judul_informasi_berkala,
+                 'keterangan_informasi_berkala' => $request->keterangan_informasi_berkala,
+             ]);
+         }
+
+         $informasiBerkala->save();
+         Alert::success('Success', 'Berhasil menambah data');
+         return redirect('/admin/peta');
+     }
+
+
+     public function editPeta($id)
+     {
+         $peta = InformasiBerkala::where('id', $id)->firstOrFail();
+         return view('Admin.informasiBerkala.peta.edit', compact('peta'));
+     }
+
+
+     public function updatePeta(Request $request, $id)
+     {
+         $informasiBerkala = InformasiBerkala::where('id', $id)->first();
+         $data = $request->all();
+
+         if ($request->has('file_informasi_berkala')) {
+             // Hapus file lama
+             if (Storage::exists('public/fileInformasiBerkala/' . $informasiBerkala->file_informasi_berkala)) {
+                 Storage::delete('public/fileInformasiBerkala/' . $informasiBerkala->file_informasi_berkala);
+             }
+
+             $file = $request->file('file_informasi_berkala');
+             $nama_file = $request->judul_informasi_berkala . "_" . time() . $file->getClientOriginalName();
+             $tujuan_upload = 'public/fileInformasiBerkala/';
+
+             // Simpan file ke direktori storage
+             $file->storeAs($tujuan_upload, $nama_file);
+
+             $data['file_informasi_berkala'] = $nama_file;
+         } else {
+             unset($data['file_informasi_berkala']);
+         }
+
+         $informasiBerkala->update($data);
+         Alert::success('Success', 'Berhasil mengupdate data');
+         return redirect('/admin/peta');
+     }
+
+     public function destroyPeta($id)
+     {
+         $informasiBerkala = InformasiBerkala::find($id);
+
+         // Hapus file_informasi_berkala
+         if (Storage::exists('public/fileInformasiBerkala/' . $informasiBerkala->file_informasi_berkala)) {
+             Storage::delete('public/fileInformasiBerkala/' . $informasiBerkala->file_informasi_berkala);
+         }
+
+         $informasiBerkala->delete();
+         Alert::success('Success', 'Berhasil menghapus data');
+         return redirect('/admin/peta');
+     }
+     // akhir peta
 }

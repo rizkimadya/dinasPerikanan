@@ -432,7 +432,7 @@
                             <span class="menu-arrow d-lg-none"></span>
                         </span>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }} {{ $title == 'Perjanjian Kinerja' ? 'here show' : '' }} {{ $title == 'Rencana Aksi' ? 'here show' : '' }} {{ $title == 'Iku' ? 'here show' : '' }} {{ $title == 'Ringkasan' ? 'here show' : '' }} {{ $title == 'PPAS' ? 'here show' : '' }} {{ $title == 'Laporan' ? 'here show' : '' }} {{ $title == 'Rekap Kelayakan' ? 'here show' : '' }} {{ $title == 'Sertifikat Kelayakan' ? 'here show' : '' }} {{ $title == 'Hasil Laboratorium' ? 'here show' : '' }} {{ $title == 'Statistik' ? 'here show' : '' }} {{ $title == 'Produksi Pelabuhan' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }} {{ $title == 'Perjanjian Kinerja' ? 'here show' : '' }} {{ $title == 'Rencana Aksi' ? 'here show' : '' }} {{ $title == 'Iku' ? 'here show' : '' }} {{ $title == 'Ringkasan' ? 'here show' : '' }} {{ $title == 'PPAS' ? 'here show' : '' }} {{ $title == 'Laporan' ? 'here show' : '' }} {{ $title == 'Rekap Kelayakan' ? 'here show' : '' }} {{ $title == 'Sertifikat Kelayakan' ? 'here show' : '' }} {{ $title == 'Hasil Laboratorium' ? 'here show' : '' }} {{ $title == 'Statistik' ? 'here show' : '' }} {{ $title == 'Produksi Pelabuhan' ? 'here show' : '' }} {{ $title == 'Peta' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -633,6 +633,18 @@
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Produksi Pelabuhan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Peta' ? 'active' : '' }}"
+                                        href="{{ url('/admin/peta') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Peta</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>

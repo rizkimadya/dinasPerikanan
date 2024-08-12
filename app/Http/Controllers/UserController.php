@@ -393,6 +393,22 @@ class UserController extends Controller
         return view('User.informasi.berkala.produksiPelabuhan.detail', compact('produksiPelabuhan', 'produksiPelabuhanLain'));
     }
 
+    public function peta()
+    {
+        $peta = InformasiBerkala::where('kategori_informasi_berkala', 'peta')->get();
+        return view('User.informasi.berkala.peta.index', compact('peta'));
+    }
+    public function detailPeta($id)
+    {
+        $peta = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $petaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'peta')->latest()->get();
+
+        return view('User.informasi.berkala.peta.detail', compact('peta', 'petaLain'));
+    }
+
+
+
 
     // informasi serta merta
     public function sop()

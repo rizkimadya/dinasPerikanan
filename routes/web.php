@@ -122,6 +122,10 @@ Route::get('/statistik/detail/{id}', [UserController::class, 'detailStatistik'])
 Route::get('/produksi-pelabuhan', [UserController::class, 'produksi-pelabuhan']);
 Route::get('/produksi-pelabuhan/detail/{id}', [UserController::class, 'detailProduksiPelabuhan']);
 
+Route::get('/peta', [UserController::class, 'peta']);
+Route::get('/peta/detail/{id}', [UserController::class, 'detailPeta']);
+
+
 // serta merta
 Route::get('/standar-operasional-prosedur', [UserController::class, 'sop']);
 Route::get('/standar-operasional-prosedur/detail/{id}', [UserController::class, 'detailSop']);
@@ -358,6 +362,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/produksiPelabuhan/update/{id}', [InformasiBerkalaController::class, 'updateProduksiPelabuhan']);
     Route::get('/admin/produksiPelabuhan/delete/{id}', [InformasiBerkalaController::class, 'destroyProduksiPelabuhan']);
 
+    // peta
+    Route::get('/admin/peta', [InformasiBerkalaController::class, 'peta']);
+    Route::post('/admin/peta', [InformasiBerkalaController::class, 'storePeta']);
+    Route::get('/admin/peta/edit/{id}', [InformasiBerkalaController::class, 'editPeta']);
+    Route::post('/admin/peta/update/{id}', [InformasiBerkalaController::class, 'updatePeta']);
+    Route::get('/admin/peta/delete/{id}', [InformasiBerkalaController::class, 'destroyPeta']);
 
 
 

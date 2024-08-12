@@ -50,7 +50,7 @@
                       <ul>
                           <li class="dropdown"><a href="#"><span>Informasi Berkala</span> <i
                                       class="bi bi-chevron-right"></i></a>
-                              <ul>
+                              <ul style="height: 400px;overflow:auto;">
                                   <li><a href="{{ url('/rencana-pembangunan') }}">Rencana Pembangunan <br> Jangka Menengah Daerah</a></li>
                                   <li><a href="{{ url('/rencana-strategis') }}">Rencana Strategis</a></li>
                                   <li><a href="{{ url('/rencana-kerja') }}">Rencana Kerja</a></li>
@@ -58,6 +58,15 @@
                                   <li><a href="{{ url('/perjanjian-kinerja') }}">Perjanjian Kinerja</a></li>
                                   <li><a href="{{ url('/rencana-aksi') }}">Rencana Aksi</a></li>
                                   <li><a href="{{ url('/iku') }}">Iku</a></li>
+                                  <li><a href="{{ url('/ringkasan') }}">Ringkasan</a></li>
+                                  <li><a href="{{ url('/ppas') }}">PPAS</a></li>
+                                  <li><a href="{{ url('/laporan') }}">Laporan</a></li>
+                                  <li><a href="{{ url('/rekap-kelayakan') }}">Rekap Kelayakan</a></li>
+                                  <li><a href="{{ url('/sertifikat-kelayakan') }}">Sertifikat Kelayakan</a></li>
+                                  <li><a href="{{ url('/hasil-laboratorium') }}">Hasil Laboratorium</a></li>
+                                  <li><a href="{{ url('/statistik') }}">Statistik</a></li>
+                                  <li><a href="{{ url('/produksi-pelabuhan') }}">Produksi Pelabuhan</a></li>
+                                  <li><a href="{{ url('/peta') }}">Peta</a></li>
                               </ul>
                           </li>
                           <li class="dropdown"><a href="#"><span>Informasi Serta Merta</span> <i
