@@ -56,6 +56,8 @@
                                   <li><a href="{{ url('/rencana-kerja') }}">Rencana Kerja</a></li>
                                   <li><a href="{{ url('/kebijakan-umum') }}">Kebijakan Umum APBD</a></li>
                                   <li><a href="{{ url('/perjanjian-kinerja') }}">Perjanjian Kinerja</a></li>
+                                  <li><a href="{{ url('/rencana-aksi') }}">Rencana Aksi</a></li>
+                                  <li><a href="{{ url('/iku') }}">Iku</a></li>
                               </ul>
                           </li>
                           <li class="dropdown"><a href="#"><span>Informasi Serta Merta</span> <i
