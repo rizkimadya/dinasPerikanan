@@ -281,6 +281,118 @@ class UserController extends Controller
         return view('User.informasi.berkala.iku.detail', compact('iku', 'ikuLain'));
     }
 
+    public function ringkasan()
+    {
+        $ringkasan = InformasiBerkala::where('kategori_informasi_berkala', 'ringkasan')->get();
+        return view('User.informasi.berkala.ringkasan.index', compact('ringkasan'));
+    }
+    public function detailRingkasan($id)
+    {
+        $ringkasan = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $ringkasanLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'ringkasan')->latest()->get();
+
+        return view('User.informasi.berkala.ringkasan.detail', compact('ringkasan', 'ringkasanLain'));
+    }
+
+    public function ppas()
+    {
+        $ppas = InformasiBerkala::where('kategori_informasi_berkala', 'ppas')->get();
+        return view('User.informasi.berkala.ppas.index', compact('ppas'));
+    }
+    public function detailPpas($id)
+    {
+        $ppas = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $ppasLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'ppas')->latest()->get();
+
+        return view('User.informasi.berkala.ppas.detail', compact('ppas', 'ppasLain'));
+    }
+
+    public function laporan()
+    {
+        $laporan = InformasiBerkala::where('kategori_informasi_berkala', 'laporan')->get();
+        return view('User.informasi.berkala.laporan.index', compact('laporan'));
+    }
+    public function detailLaporan($id)
+    {
+        $laporan = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $laporanLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'laporan')->latest()->get();
+
+        return view('User.informasi.berkala.laporan.detail', compact('laporan', 'laporanLain'));
+    }
+
+    public function rekapKelayakan()
+    {
+        $rekapKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'rekapKelayakan')->get();
+        return view('User.informasi.berkala.rekapKelayakan.index', compact('rekapKelayakan'));
+    }
+    public function detailRekapanKelayakan($id)
+    {
+        $rekapKelayakan = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $rekapanKelayakanLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'rekapKelayakan')->latest()->get();
+
+        return view('User.informasi.berkala.rekapKelayakan.detail', compact('rekapKelayakan', 'rekapanKelayakanLain'));
+    }
+
+    public function sertifikatKelayakan()
+    {
+        $sertifikatKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'sertifikatKelayakan')->get();
+        return view('User.informasi.berkala.sertifikatKelayakan.index', compact('sertifikatKelayakan'));
+    }
+    public function detailSertifikatKelayakan($id)
+    {
+        $sertifikatKelayakan = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $sertifikatKelayakanLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'sertifikatKelayakan')->latest()->get();
+
+        return view('User.informasi.berkala.sertifikatKelayakan.detail', compact('sertifikatKelayakan', 'sertifikatKelayakanLain'));
+    }
+
+    public function hasilLaboratorium()
+    {
+        $hasilLaboratorium = InformasiBerkala::where('kategori_informasi_berkala', 'hasilLaboratorium')->get();
+        return view('User.informasi.berkala.hasilLaboratorium.index', compact('hasilLaboratorium'));
+    }
+    public function detailHasilLaboratorium($id)
+    {
+        $hasilLaboratorium = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $hasilLaboratoriumLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'hasilLaboratorium')->latest()->get();
+
+        return view('User.informasi.berkala.hasilLaboratorium.detail', compact('hasilLaboratorium', 'hasilLaboratoriumLain'));
+    }
+
+    public function statistik()
+    {
+        $statistik = InformasiBerkala::where('kategori_informasi_berkala', 'statistik')->get();
+        return view('User.informasi.berkala.statistik.index', compact('statistik'));
+    }
+    public function detailStatistik($id)
+    {
+        $statistik = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $statistikLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'statistik')->latest()->get();
+
+        return view('User.informasi.berkala.statistik.detail', compact('statistik', 'statistikLain'));
+    }
+
+    public function produksiPelabuhan()
+    {
+        $produksiPelabuhan = InformasiBerkala::where('kategori_informasi_berkala', 'produksiPelabuhan')->get();
+        return view('User.informasi.berkala.produksiPelabuhan.index', compact('produksiPelabuhan'));
+    }
+    public function detailProduksiPelabuhan($id)
+    {
+        $produksiPelabuhan = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $produksiPelabuhanLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'produksiPelabuhan')->latest()->get();
+
+        return view('User.informasi.berkala.produksiPelabuhan.detail', compact('produksiPelabuhan', 'produksiPelabuhanLain'));
+    }
+
 
     // informasi serta merta
     public function sop()

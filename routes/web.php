@@ -98,6 +98,30 @@ Route::get('/rencana-aksi/detail/{id}', [UserController::class, 'detailRencanaAk
 Route::get('/iku', [UserController::class, 'iku']);
 Route::get('/iku/detail/{id}', [UserController::class, 'detailIku']);
 
+Route::get('/ringkasan', [UserController::class, 'ringkasan']);
+Route::get('/ringkasan/detail/{id}', [UserController::class, 'detailRingkasan']);
+
+Route::get('/ppas', [UserController::class, 'ppas']);
+Route::get('/ppas/detail/{id}', [UserController::class, 'detailPpas']);
+
+Route::get('/laporan', [UserController::class, 'laporan']);
+Route::get('/laporan/detail/{id}', [UserController::class, 'detailLaporan']);
+
+Route::get('/rekap-kelayakan', [UserController::class, 'rekapKelayakan']);
+Route::get('/rekap-kelayakan/detail/{id}', [UserController::class, 'detailRekapKelayakan']);
+
+Route::get('/sertifikat-kelayakan', [UserController::class, 'sertifikatKelayakan']);
+Route::get('/sertifikat-kelayakan/detail/{id}', [UserController::class, 'detailSertifikatKelayakan']);
+
+Route::get('/hasil-laboratorium', [UserController::class, 'hasilLaboratorium']);
+Route::get('/hasil-laboratorium/detail/{id}', [UserController::class, 'detailHasilLaboratorium']);
+
+Route::get('/statistik', [UserController::class, 'statistik']);
+Route::get('/statistik/detail/{id}', [UserController::class, 'detailStatistik']);
+
+Route::get('/produksi-pelabuhan', [UserController::class, 'produksi-pelabuhan']);
+Route::get('/produksi-pelabuhan/detail/{id}', [UserController::class, 'detailProduksiPelabuhan']);
+
 // serta merta
 Route::get('/standar-operasional-prosedur', [UserController::class, 'sop']);
 Route::get('/standar-operasional-prosedur/detail/{id}', [UserController::class, 'detailSop']);
