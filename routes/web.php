@@ -330,12 +330,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/rekapKelayakan/update/{id}', [InformasiBerkalaController::class, 'updateRekapKelayakan']);
     Route::get('/admin/rekapKelayakan/delete/{id}', [InformasiBerkalaController::class, 'destroyRekapKelayakan']);
 
-    // sertifikasKelayakan
-    Route::get('/admin/sertifikasKelayakan', [InformasiBerkalaController::class, 'sertifikasKelayakan']);
-    Route::post('/admin/sertifikasKelayakan', [InformasiBerkalaController::class, 'storeSertifikatKelayakan']);
-    Route::get('/admin/sertifikasKelayakan/edit/{id}', [InformasiBerkalaController::class, 'editSertifikatKelayakan']);
-    Route::post('/admin/sertifikasKelayakan/update/{id}', [InformasiBerkalaController::class, 'updateSertifikatKelayakan']);
-    Route::get('/admin/sertifikasKelayakan/delete/{id}', [InformasiBerkalaController::class, 'destroySertifikatKelayakan']);
+    // sertifikatKelayakan
+    Route::get('/admin/sertifikatKelayakan', [InformasiBerkalaController::class, 'sertifikatKelayakan']);
+    Route::post('/admin/sertifikatKelayakan', [InformasiBerkalaController::class, 'storeSertifikatKelayakan']);
+    Route::get('/admin/sertifikatKelayakan/edit/{id}', [InformasiBerkalaController::class, 'editSertifikatKelayakan']);
+    Route::post('/admin/sertifikatKelayakan/update/{id}', [InformasiBerkalaController::class, 'updateSertifikatKelayakan']);
+    Route::get('/admin/sertifikatKelayakan/delete/{id}', [InformasiBerkalaController::class, 'destroySertifikatKelayakan']);
 
     // hasilLaboratorium
     Route::get('/admin/hasilLaboratorium', [InformasiBerkalaController::class, 'hasilLaboratorium']);

@@ -432,7 +432,7 @@
                             <span class="menu-arrow d-lg-none"></span>
                         </span>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }} {{ $title == 'Perjanjian Kinerja' ? 'here show' : '' }} {{ $title == 'Rencana Aksi' ? 'here show' : '' }} {{ $title == 'Iku' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }} {{ $title == 'Perjanjian Kinerja' ? 'here show' : '' }} {{ $title == 'Rencana Aksi' ? 'here show' : '' }} {{ $title == 'Iku' ? 'here show' : '' }} {{ $title == 'Ringkasan' ? 'here show' : '' }} {{ $title == 'PPAS' ? 'here show' : '' }} {{ $title == 'Laporan' ? 'here show' : '' }} {{ $title == 'Rekap Kelayakan' ? 'here show' : '' }} {{ $title == 'Sertifikat Kelayakan' ? 'here show' : '' }} {{ $title == 'Hasil Laboratorium' ? 'here show' : '' }} {{ $title == 'Statistik' ? 'here show' : '' }} {{ $title == 'Produksi Pelabuhan' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -538,6 +538,101 @@
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">Iku</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Ringkasan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/ringkasan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Ringkasan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'PPAS' ? 'active' : '' }}"
+                                        href="{{ url('/admin/ppas') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">PPAS</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Laporan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/laporan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Laporan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Rekap Kelayakan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/rekapKelayakan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Rekap Kelayakan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Sertifikat Kelayakan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/sertifikatKelayakan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Sertifikat Kelayakan</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Hasil Laboratorium' ? 'active' : '' }}"
+                                        href="{{ url('/admin/hasilLaboratorium') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Hasil Laboratorium</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Statistik' ? 'active' : '' }}"
+                                        href="{{ url('/admin/statistik') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Statistik</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Produksi Pelabuhan' ? 'active' : '' }}"
+                                        href="{{ url('/admin/produksiPelabuhan') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Produksi Pelabuhan</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>

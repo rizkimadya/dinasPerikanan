@@ -1,4 +1,4 @@
-@extends('LayoutAdmin.app', ['title' => 'Rencana Aksi'])
+@extends('LayoutAdmin.app', ['title' => 'Sertifikat Kelayakan'])
 
 @section('modal-add')
     <!-- Button trigger modal -->
@@ -10,7 +10,7 @@
                 <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="currentColor" />
             </svg>
         </span>
-        Tambah Rencana Aksi
+        Tambah Sertifikat Kelayakan
     </button>
 
     <!-- Modal -->
@@ -18,15 +18,15 @@
         <div class="modal-dialog modal-dialog-centered mw-650px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Rencana Aksi</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Sertifikat Kelayakan</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ url('/admin/rencanaAksi') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('/admin/sertifikatKelayakan') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div style="max-height: 66vh; overflow: auto">
                             <div class="mb-3">
-                                <label for="judul_informasi_berkala" class="form-label">Judul Rencana Aksi <span
+                                <label for="judul_informasi_berkala" class="form-label">Judul Sertifikat Kelayakan <span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="judul_informasi_berkala"
                                     id="judul_informasi_berkala" required placeholder="Masukkan Judul ">
@@ -61,14 +61,14 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Judul Rencana Aksi</th>
-                            <th>File Rencana Aksi</th>
+                            <th>Judul Sertifikat Kelayakan</th>
+                            <th>File Sertifikat Kelayakan</th>
                             <th>Keterangan</th>
                             <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($rencanaAksi as $item)
+                        @foreach ($sertifikatKelayakan as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->judul_informasi_berkala }}</td>
@@ -78,7 +78,7 @@
                                     @else
                                         <a href="{{ asset('storage/fileInformasiBerkala/' . $item->file_informasi_berkala) }}"
                                             target="_blank">Lihat
-                                            File Rencana Aksi
+                                            File Sertifikat Kelayakan
                                         </a>
                                     @endif
                                 </td>
@@ -107,12 +107,12 @@
                                         data-kt-menu="true">
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="/admin/rencanaAksi/edit/{{ $item->id }}" class="menu-link px-3">Edit</a>
+                                            <a href="/admin/sertifikatKelayakan/edit/{{ $item->id }}" class="menu-link px-3">Edit</a>
                                         </div>
                                         <!--end::Menu item-->
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <a href="/admin/rencanaAksi/delete/{{ $item->id }}" class="menu-link px-3"
+                                            <a href="/admin/sertifikatKelayakan/delete/{{ $item->id }}" class="menu-link px-3"
                                                 onclick="return confirm('Apakah Anda yakin ingin menghapus item ini?')">
                                                 Delete
                                             </a>
