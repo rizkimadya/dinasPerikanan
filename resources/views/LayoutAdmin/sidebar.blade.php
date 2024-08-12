@@ -432,7 +432,7 @@
                             <span class="menu-arrow d-lg-none"></span>
                         </span>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'RPJMD' ? 'here show' : '' }} {{ $title == 'Renstra (Rencana Strategis)' ? 'here show' : '' }} {{ $title == 'Renja (Rencana Kerja)' ? 'here show' : '' }} {{ $title == 'KUA (Kebijakan Umum APBD)' ? 'here show' : '' }} {{ $title == 'Perjanjian Kinerja' ? 'here show' : '' }} {{ $title == 'Rencana Aksi' ? 'here show' : '' }} {{ $title == 'Iku' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">
@@ -502,6 +502,42 @@
                                             <span class="bullet bullet-dot"></span>
                                         </span>
                                         <span class="menu-title">KUA (Kebijakan Umum APBD)</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Perjanjian Kinerja' ? 'active' : '' }}"
+                                        href="{{ url('/admin/perjanjianKinerja') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Perjanjian Kinerja</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Rencana Aksi' ? 'active' : '' }}"
+                                        href="{{ url('/admin/rencanaAksi') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Rencana Aksi</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link {{ $title == 'Iku' ? 'active' : '' }}"
+                                        href="{{ url('/admin/iku') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Iku</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>

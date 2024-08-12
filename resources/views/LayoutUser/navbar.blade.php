@@ -1,6 +1,6 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
-      <div class="container d-flex align-items-center justify-content-between">
+      <div class="container d-flex">
 
           <div class="logo">
               <a href="{{ url('/') }}" class="d-flex">
@@ -13,7 +13,7 @@
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
-          <nav id="navbar" class="navbar">
+          <nav id="navbar" class="navbar mx-auto">
               <ul>
                   <li><a class="nav-link scrollto {{ $title == 'Beranda' ? 'active' : '' }}"
                           href="{{ url('/') }}">Beranda</a></li>
@@ -55,6 +55,7 @@
                                   <li><a href="{{ url('/rencana-strategis') }}">Rencana Strategis</a></li>
                                   <li><a href="{{ url('/rencana-kerja') }}">Rencana Kerja</a></li>
                                   <li><a href="{{ url('/kebijakan-umum') }}">Kebijakan Umum APBD</a></li>
+                                  <li><a href="{{ url('/perjanjian-kinerja') }}">Perjanjian Kinerja</a></li>
                               </ul>
                           </li>
                           <li class="dropdown"><a href="#"><span>Informasi Serta Merta</span> <i

@@ -89,6 +89,15 @@ Route::get('/rencana-kerja/detail/{id}', [UserController::class, 'detailRenja'])
 Route::get('/kebijakan-umum', [UserController::class, 'kua']);
 Route::get('/kebijakan-umum/detail/{id}', [UserController::class, 'detailKua']);
 
+Route::get('/perjanjian-kinerja', [UserController::class, 'perjanjianKinerja']);
+Route::get('/perjanjian-kinerja/detail/{id}', [UserController::class, 'detailPerjanjianKinerja']);
+
+Route::get('/rencana-aksi', [UserController::class, 'rencanaAksi']);
+Route::get('/rencana-aksi/detail/{id}', [UserController::class, 'detailRencanaAksi']);
+
+Route::get('/iku', [UserController::class, 'iku']);
+Route::get('/iku/detail/{id}', [UserController::class, 'detailIku']);
+
 // serta merta
 Route::get('/standar-operasional-prosedur', [UserController::class, 'sop']);
 Route::get('/standar-operasional-prosedur/detail/{id}', [UserController::class, 'detailSop']);
@@ -247,6 +256,87 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/kua/edit/{id}', [InformasiBerkalaController::class, 'editKua']);
     Route::post('/admin/kua/update/{id}', [InformasiBerkalaController::class, 'updateKua']);
     Route::get('/admin/kua/delete/{id}', [InformasiBerkalaController::class, 'destroyKua']);
+
+    // perjanjianKinerja
+    Route::get('/admin/perjanjianKinerja', [InformasiBerkalaController::class, 'perjanjianKinerja']);
+    Route::post('/admin/perjanjianKinerja', [InformasiBerkalaController::class, 'storePerjanjianKinerja']);
+    Route::get('/admin/perjanjianKinerja/edit/{id}', [InformasiBerkalaController::class, 'editPerjanjianKinerja']);
+    Route::post('/admin/perjanjianKinerja/update/{id}', [InformasiBerkalaController::class, 'updatePerjanjianKinerja']);
+    Route::get('/admin/perjanjianKinerja/delete/{id}', [InformasiBerkalaController::class, 'destroyPerjanjianKinerja']);
+
+    // rencanaAksi
+    Route::get('/admin/rencanaAksi', [InformasiBerkalaController::class, 'rencanaAksi']);
+    Route::post('/admin/rencanaAksi', [InformasiBerkalaController::class, 'storeRencanaAksi']);
+    Route::get('/admin/rencanaAksi/edit/{id}', [InformasiBerkalaController::class, 'editRencanaAksi']);
+    Route::post('/admin/rencanaAksi/update/{id}', [InformasiBerkalaController::class, 'updateRencanaAksi']);
+    Route::get('/admin/rencanaAksi/delete/{id}', [InformasiBerkalaController::class, 'destroyRencanaAksi']);
+
+    // iku
+    Route::get('/admin/iku', [InformasiBerkalaController::class, 'iku']);
+    Route::post('/admin/iku', [InformasiBerkalaController::class, 'storeIku']);
+    Route::get('/admin/iku/edit/{id}', [InformasiBerkalaController::class, 'editIku']);
+    Route::post('/admin/iku/update/{id}', [InformasiBerkalaController::class, 'updateIku']);
+    Route::get('/admin/iku/delete/{id}', [InformasiBerkalaController::class, 'destroyIku']);
+
+    // ringkasan
+    Route::get('/admin/ringkasan', [InformasiBerkalaController::class, 'ringkasan']);
+    Route::post('/admin/ringkasan', [InformasiBerkalaController::class, 'storeRingkasan']);
+    Route::get('/admin/ringkasan/edit/{id}', [InformasiBerkalaController::class, 'editRingkasan']);
+    Route::post('/admin/ringkasan/update/{id}', [InformasiBerkalaController::class, 'updateRingkasan']);
+    Route::get('/admin/ringkasan/delete/{id}', [InformasiBerkalaController::class, 'destroyRingkasan']);
+
+    // ppas
+    Route::get('/admin/ppas', [InformasiBerkalaController::class, 'ppas']);
+    Route::post('/admin/ppas', [InformasiBerkalaController::class, 'storePpas']);
+    Route::get('/admin/ppas/edit/{id}', [InformasiBerkalaController::class, 'editPpas']);
+    Route::post('/admin/ppas/update/{id}', [InformasiBerkalaController::class, 'updatePpas']);
+    Route::get('/admin/ppas/delete/{id}', [InformasiBerkalaController::class, 'destroyPpas']);
+
+    // laporan
+    Route::get('/admin/laporan', [InformasiBerkalaController::class, 'laporan']);
+    Route::post('/admin/laporan', [InformasiBerkalaController::class, 'storeLaporan']);
+    Route::get('/admin/laporan/edit/{id}', [InformasiBerkalaController::class, 'editLaporan']);
+    Route::post('/admin/laporan/update/{id}', [InformasiBerkalaController::class, 'updateLaporan']);
+    Route::get('/admin/laporan/delete/{id}', [InformasiBerkalaController::class, 'destroyLaporan']);
+
+    // rekapKelayakan
+    Route::get('/admin/rekapKelayakan', [InformasiBerkalaController::class, 'rekapKelayakan']);
+    Route::post('/admin/rekapKelayakan', [InformasiBerkalaController::class, 'storeRekapKelayakan']);
+    Route::get('/admin/rekapKelayakan/edit/{id}', [InformasiBerkalaController::class, 'editRekapKelayakan']);
+    Route::post('/admin/rekapKelayakan/update/{id}', [InformasiBerkalaController::class, 'updateRekapKelayakan']);
+    Route::get('/admin/rekapKelayakan/delete/{id}', [InformasiBerkalaController::class, 'destroyRekapKelayakan']);
+
+    // sertifikasKelayakan
+    Route::get('/admin/sertifikasKelayakan', [InformasiBerkalaController::class, 'sertifikasKelayakan']);
+    Route::post('/admin/sertifikasKelayakan', [InformasiBerkalaController::class, 'storeSertifikatKelayakan']);
+    Route::get('/admin/sertifikasKelayakan/edit/{id}', [InformasiBerkalaController::class, 'editSertifikatKelayakan']);
+    Route::post('/admin/sertifikasKelayakan/update/{id}', [InformasiBerkalaController::class, 'updateSertifikatKelayakan']);
+    Route::get('/admin/sertifikasKelayakan/delete/{id}', [InformasiBerkalaController::class, 'destroySertifikatKelayakan']);
+
+    // hasilLaboratorium
+    Route::get('/admin/hasilLaboratorium', [InformasiBerkalaController::class, 'hasilLaboratorium']);
+    Route::post('/admin/hasilLaboratorium', [InformasiBerkalaController::class, 'storeHasilLaboratorium']);
+    Route::get('/admin/hasilLaboratorium/edit/{id}', [InformasiBerkalaController::class, 'editHasilLaboratorium']);
+    Route::post('/admin/hasilLaboratorium/update/{id}', [InformasiBerkalaController::class, 'updateHasilLaboratorium']);
+    Route::get('/admin/hasilLaboratorium/delete/{id}', [InformasiBerkalaController::class, 'destroyHasilLaboratorium']);
+
+    // statistik
+    Route::get('/admin/statistik', [InformasiBerkalaController::class, 'statistik']);
+    Route::post('/admin/statistik', [InformasiBerkalaController::class, 'storeStatistik']);
+    Route::get('/admin/statistik/edit/{id}', [InformasiBerkalaController::class, 'editStatistik']);
+    Route::post('/admin/statistik/update/{id}', [InformasiBerkalaController::class, 'updateStatistik']);
+    Route::get('/admin/statistik/delete/{id}', [InformasiBerkalaController::class, 'destroyStatistik']);
+
+    // produksiPelabuhan
+    Route::get('/admin/produksiPelabuhan', [InformasiBerkalaController::class, 'produksiPelabuhan']);
+    Route::post('/admin/produksiPelabuhan', [InformasiBerkalaController::class, 'storeProduksiPelabuhan']);
+    Route::get('/admin/produksiPelabuhan/edit/{id}', [InformasiBerkalaController::class, 'editProduksiPelabuhan']);
+    Route::post('/admin/produksiPelabuhan/update/{id}', [InformasiBerkalaController::class, 'updateProduksiPelabuhan']);
+    Route::get('/admin/produksiPelabuhan/delete/{id}', [InformasiBerkalaController::class, 'destroyProduksiPelabuhan']);
+
+
+
+
 
     // sop
     Route::get('/admin/sop', [SertaMertaController::class, 'sop']);

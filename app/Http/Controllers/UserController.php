@@ -239,6 +239,48 @@ class UserController extends Controller
         return view('User.informasi.berkala.kua.detail', compact('kua', 'kuaLain'));
     }
 
+    public function perjanjianKinerja()
+    {
+        $perjanjianKinerja = InformasiBerkala::where('kategori_informasi_berkala', 'perjanjianKinerja')->get();
+        return view('User.informasi.berkala.perjanjianKinerja.index', compact('perjanjianKinerja'));
+    }
+    public function detailPerjanjianKinerja($id)
+    {
+        $perjanjianKinerja = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $perjanjianKinerjaLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'perjanjianKinerja')->latest()->get();
+
+        return view('User.informasi.berkala.perjanjianKinerja.detail', compact('perjanjianKinerja', 'perjanjianKinerjaLain'));
+    }
+
+    public function rencanaAksi()
+    {
+        $rencanaAksi = InformasiBerkala::where('kategori_informasi_berkala', 'rencanaAksi')->get();
+        return view('User.informasi.berkala.rencanaAksi.index', compact('rencanaAksi'));
+    }
+    public function detailRencanaAksi($id)
+    {
+        $rencanaAksi = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $rencanaAksiLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'rencanaAksi')->latest()->get();
+
+        return view('User.informasi.berkala.rencanaAksi.detail', compact('rencanaAksi', 'rencanaAksiLain'));
+    }
+
+    public function iku()
+    {
+        $iku = InformasiBerkala::where('kategori_informasi_berkala', 'iku')->get();
+        return view('User.informasi.berkala.iku.index', compact('iku'));
+    }
+    public function detailIku($id)
+    {
+        $iku = InformasiBerkala::where('id', $id)->firstOrFail();
+
+        $ikuLain = InformasiBerkala::where('id', '!=', $id)->where('kategori_informasi_berkala', 'iku')->latest()->get();
+
+        return view('User.informasi.berkala.iku.detail', compact('iku', 'ikuLain'));
+    }
+
 
     // informasi serta merta
     public function sop()
