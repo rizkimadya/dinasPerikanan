@@ -18,7 +18,7 @@ class AlbumKegiatanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'gambar.*' => 'required|image|mimes:jpg,jpeg,png|max:5000', // Note the 'gambar.*' for multiple images
+            'gambar.*' => 'required|image|mimes:jpg,jpeg,png', // Note the 'gambar.*' for multiple images
             'nama_kegiatan' => 'required',
         ]);
 
