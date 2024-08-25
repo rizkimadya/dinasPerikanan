@@ -15,6 +15,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <img width="100%" loading="lazy" src="https://dkpsulsel.my.id/storage/fileCkeditor/STRUKTUR%20ORGANISASI_1724251420%201_1724610753.png" alt="">
+                </div>
+                <div class="col-12">
                     <p>{!! optional($strukturOrganisasi)->isi !!}</p>
                 </div>
             </div>
