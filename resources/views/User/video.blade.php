@@ -24,12 +24,9 @@
             <div class="row">
                 @foreach ($video as $item)
                     <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <a href="{{ $item->link_video }}" target="_blank" class="member">
+                        <a href="{{ $item->link_video }}" target="_blank" class="member w-100">
                             <div class="member-img">
-                                <iframe width="100%" src="{{ $item->link_video }}" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
+                                <img src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg" width="100%" alt="">
                             </div>
                             <div class="member-info">
                                 <h4>{{ $item->nama_kegiatan }}</h4>

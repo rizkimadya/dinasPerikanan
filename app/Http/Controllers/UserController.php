@@ -46,9 +46,20 @@ class UserController extends Controller
         return view('User.pengumuman.detail', compact('pengumuman', 'pengumumanLain'));
     }
 
-    public function berita()
+    public function berita(Request $request)
     {
-        $berita = Berita::latest()->get();
+        $search = $request->input('search');
+        // dd($search);
+
+        // Jika ada query pencarian, filter berita berdasarkan judul atau deskripsi
+        if ($search) {
+            $berita = Berita::where('judul', 'like', "%{$search}%")
+                ->orWhere('deskripsi', 'like', "%{$search}%")
+                ->get();
+        } else {
+            // Jika tidak ada query, tampilkan semua berita
+            $berita = Berita::latest()->get();
+        }
 
         return view('User.berita.berita', compact('berita'));
     }
@@ -62,9 +73,19 @@ class UserController extends Controller
     }
 
     //profil pejabat
-    public function profilPejabat()
+    public function profilPejabat(Request $request)
     {
-        $pejabat = Pejabat::latest()->get();
+        $search = $request->input('search');
+        // dd($search);
+
+        // Jika ada query pencarian, filter pejabat berdasarkan nama_lengkap atau jabatan
+        if ($search) {
+            $pejabat = Pejabat::where('nama_lengkap', 'like', "%{$search}%")
+                ->orWhere('jabatan', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $pejabat = Pejabat::latest()->get();
+        }
 
         return view('User.profil.profilPejabat', compact('pejabat'));
     }
@@ -183,9 +204,20 @@ class UserController extends Controller
     }
 
     // informasi berkala
-    public function rpjmd()
+    public function rpjmd(Request $request)
     {
-        $rpjmd = InformasiBerkala::where('kategori_informasi_berkala', 'rpjmd')->get();
+        $search = $request->input('search');
+        // dd($search);
+
+        // Jika ada query pencarian, filter berita berdasarkan judul atau deskripsi
+        if ($search) {
+            $rpjmd = InformasiBerkala::where('kategori_informasi_berkala', 'rpjmd')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $rpjmd = InformasiBerkala::where('kategori_informasi_berkala', 'rpjmd')->get();
+        }
+
         return view('User.informasi.berkala.rpjmd.index', compact('rpjmd'));
     }
     public function detailRpjmd($id)
@@ -197,9 +229,18 @@ class UserController extends Controller
         return view('User.informasi.berkala.rpjmd.detail', compact('rpjmd', 'rpjmdLain'));
     }
 
-    public function renstra()
+    public function renstra(Request $request)
     {
-        $renstra = InformasiBerkala::where('kategori_informasi_berkala', 'renstra')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $renstra = InformasiBerkala::where('kategori_informasi_berkala', 'renstra')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $renstra = InformasiBerkala::where('kategori_informasi_berkala', 'renstra')->get();
+        }
+
         return view('User.informasi.berkala.renstra.index', compact('renstra'));
     }
     public function detailRenstra($id)
@@ -211,9 +252,17 @@ class UserController extends Controller
         return view('User.informasi.berkala.renstra.detail', compact('renstra', 'renstraLain'));
     }
 
-    public function renja()
+    public function renja(Request $request)
     {
-        $renja = InformasiBerkala::where('kategori_informasi_berkala', 'renja')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $renja = InformasiBerkala::where('kategori_informasi_berkala', 'renja')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $renja = InformasiBerkala::where('kategori_informasi_berkala', 'renja')->get();
+        }
         return view('User.informasi.berkala.renja.index', compact('renja'));
     }
     public function detailRenja($id)
@@ -225,9 +274,17 @@ class UserController extends Controller
         return view('User.informasi.berkala.renja.detail', compact('renja', 'renjaLain'));
     }
 
-    public function kua()
+    public function kua(Request $request)
     {
-        $kua = InformasiBerkala::where('kategori_informasi_berkala', 'kua')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $kua = InformasiBerkala::where('kategori_informasi_berkala', 'kua')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $kua = InformasiBerkala::where('kategori_informasi_berkala', 'kua')->get();
+        }
         return view('User.informasi.berkala.kua.index', compact('kua'));
     }
     public function detailKua($id)
@@ -239,9 +296,17 @@ class UserController extends Controller
         return view('User.informasi.berkala.kua.detail', compact('kua', 'kuaLain'));
     }
 
-    public function perjanjianKinerja()
+    public function perjanjianKinerja(Request $request)
     {
-        $perjanjianKinerja = InformasiBerkala::where('kategori_informasi_berkala', 'perjanjianKinerja')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $perjanjianKinerja = InformasiBerkala::where('kategori_informasi_berkala', 'perjanjianKinerja')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $perjanjianKinerja = InformasiBerkala::where('kategori_informasi_berkala', 'perjanjianKinerja')->get();
+        }
         return view('User.informasi.berkala.perjanjianKinerja.index', compact('perjanjianKinerja'));
     }
     public function detailPerjanjianKinerja($id)
@@ -253,11 +318,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.perjanjianKinerja.detail', compact('perjanjianKinerja', 'perjanjianKinerjaLain'));
     }
 
-    public function rencanaAksi()
+    public function rencanaAksi(Request $request)
     {
-        $rencanaAksi = InformasiBerkala::where('kategori_informasi_berkala', 'rencanaAksi')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $rencanaAksi = InformasiBerkala::where('kategori_informasi_berkala', 'rencanaAksi')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $rencanaAksi = InformasiBerkala::where('kategori_informasi_berkala', 'rencanaAksi')->get();
+        }
         return view('User.informasi.berkala.rencanaAksi.index', compact('rencanaAksi'));
     }
+
     public function detailRencanaAksi($id)
     {
         $rencanaAksi = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -267,11 +341,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.rencanaAksi.detail', compact('rencanaAksi', 'rencanaAksiLain'));
     }
 
-    public function iku()
+    public function iku(Request $request)
     {
-        $iku = InformasiBerkala::where('kategori_informasi_berkala', 'iku')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $iku = InformasiBerkala::where('kategori_informasi_berkala', 'iku')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $iku = InformasiBerkala::where('kategori_informasi_berkala', 'iku')->get();
+        }
         return view('User.informasi.berkala.iku.index', compact('iku'));
     }
+
     public function detailIku($id)
     {
         $iku = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -281,9 +364,17 @@ class UserController extends Controller
         return view('User.informasi.berkala.iku.detail', compact('iku', 'ikuLain'));
     }
 
-    public function ringkasan()
+    public function ringkasan(Request $request)
     {
-        $ringkasan = InformasiBerkala::where('kategori_informasi_berkala', 'ringkasan')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $ringkasan = InformasiBerkala::where('kategori_informasi_berkala', 'ringkasan')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $ringkasan = InformasiBerkala::where('kategori_informasi_berkala', 'ringkasan')->get();
+        }
         return view('User.informasi.berkala.ringkasan.index', compact('ringkasan'));
     }
     public function detailRingkasan($id)
@@ -295,11 +386,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.ringkasan.detail', compact('ringkasan', 'ringkasanLain'));
     }
 
-    public function ppas()
+    public function ppas(Request $request)
     {
-        $ppas = InformasiBerkala::where('kategori_informasi_berkala', 'ppas')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $ppas = InformasiBerkala::where('kategori_informasi_berkala', 'ppas')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $ppas = InformasiBerkala::where('kategori_informasi_berkala', 'ppas')->get();
+        }
         return view('User.informasi.berkala.ppas.index', compact('ppas'));
     }
+
     public function detailPpas($id)
     {
         $ppas = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -309,11 +409,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.ppas.detail', compact('ppas', 'ppasLain'));
     }
 
-    public function laporan()
+    public function laporan(Request $request)
     {
-        $laporan = InformasiBerkala::where('kategori_informasi_berkala', 'laporan')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $laporan = InformasiBerkala::where('kategori_informasi_berkala', 'laporan')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $laporan = InformasiBerkala::where('kategori_informasi_berkala', 'laporan')->get();
+        }
         return view('User.informasi.berkala.laporan.index', compact('laporan'));
     }
+
     public function detailLaporan($id)
     {
         $laporan = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -323,11 +432,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.laporan.detail', compact('laporan', 'laporanLain'));
     }
 
-    public function rekapKelayakan()
+    public function rekapKelayakan(Request $request)
     {
-        $rekapKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'rekapKelayakan')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $rekapKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'rekapKelayakan')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $rekapKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'rekapKelayakan')->get();
+        }
         return view('User.informasi.berkala.rekapKelayakan.index', compact('rekapKelayakan'));
     }
+
     public function detailRekapanKelayakan($id)
     {
         $rekapKelayakan = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -337,11 +455,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.rekapKelayakan.detail', compact('rekapKelayakan', 'rekapanKelayakanLain'));
     }
 
-    public function sertifikatKelayakan()
+    public function sertifikatKelayakan(Request $request)
     {
-        $sertifikatKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'sertifikatKelayakan')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $sertifikatKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'sertifikatKelayakan')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $sertifikatKelayakan = InformasiBerkala::where('kategori_informasi_berkala', 'sertifikatKelayakan')->get();
+        }
         return view('User.informasi.berkala.sertifikatKelayakan.index', compact('sertifikatKelayakan'));
     }
+
     public function detailSertifikatKelayakan($id)
     {
         $sertifikatKelayakan = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -351,11 +478,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.sertifikatKelayakan.detail', compact('sertifikatKelayakan', 'sertifikatKelayakanLain'));
     }
 
-    public function hasilLaboratorium()
+    public function hasilLaboratorium(Request $request)
     {
-        $hasilLaboratorium = InformasiBerkala::where('kategori_informasi_berkala', 'hasilLaboratorium')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $hasilLaboratorium = InformasiBerkala::where('kategori_informasi_berkala', 'hasilLaboratorium')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $hasilLaboratorium = InformasiBerkala::where('kategori_informasi_berkala', 'hasilLaboratorium')->get();
+        }
         return view('User.informasi.berkala.hasilLaboratorium.index', compact('hasilLaboratorium'));
     }
+
     public function detailHasilLaboratorium($id)
     {
         $hasilLaboratorium = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -365,11 +501,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.hasilLaboratorium.detail', compact('hasilLaboratorium', 'hasilLaboratoriumLain'));
     }
 
-    public function statistik()
+    public function statistik(Request $request)
     {
-        $statistik = InformasiBerkala::where('kategori_informasi_berkala', 'statistik')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $statistik = InformasiBerkala::where('kategori_informasi_berkala', 'statistik')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $statistik = InformasiBerkala::where('kategori_informasi_berkala', 'statistik')->get();
+        }
         return view('User.informasi.berkala.statistik.index', compact('statistik'));
     }
+
     public function detailStatistik($id)
     {
         $statistik = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -379,11 +524,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.statistik.detail', compact('statistik', 'statistikLain'));
     }
 
-    public function produksiPelabuhan()
+    public function produksiPelabuhan(Request $request)
     {
-        $produksiPelabuhan = InformasiBerkala::where('kategori_informasi_berkala', 'produksiPelabuhan')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $produksiPelabuhan = InformasiBerkala::where('kategori_informasi_berkala', 'produksiPelabuhan')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $produksiPelabuhan = InformasiBerkala::where('kategori_informasi_berkala', 'produksiPelabuhan')->get();
+        }
         return view('User.informasi.berkala.produksiPelabuhan.index', compact('produksiPelabuhan'));
     }
+
     public function detailProduksiPelabuhan($id)
     {
         $produksiPelabuhan = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -393,11 +547,20 @@ class UserController extends Controller
         return view('User.informasi.berkala.produksiPelabuhan.detail', compact('produksiPelabuhan', 'produksiPelabuhanLain'));
     }
 
-    public function peta()
+    public function peta(Request $request)
     {
-        $peta = InformasiBerkala::where('kategori_informasi_berkala', 'peta')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $peta = InformasiBerkala::where('kategori_informasi_berkala', 'peta')->where('judul_informasi_berkala', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $peta = InformasiBerkala::where('kategori_informasi_berkala', 'peta')->get();
+        }
         return view('User.informasi.berkala.peta.index', compact('peta'));
     }
+
     public function detailPeta($id)
     {
         $peta = InformasiBerkala::where('id', $id)->firstOrFail();
@@ -411,9 +574,17 @@ class UserController extends Controller
 
 
     // informasi serta merta
-    public function sop()
+    public function sop(Request $request)
     {
-        $sop = SertaMerta::where('kategori_serta_merta', 'sop')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $sop = SertaMerta::where('kategori_serta_merta', 'sop')->where('judul_serta_merta', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $sop = SertaMerta::where('kategori_serta_merta', 'sop')->get();
+        }
         return view('User.informasi.sertaMerta.sop.index', compact('sop'));
     }
     public function detailSop($id)
@@ -453,9 +624,17 @@ class UserController extends Controller
         return view('User.informasi.sertaMerta.fpi.detail', compact('fpi', 'fpiLain'));
     }
 
-    public function di()
+    public function di(Request $request)
     {
-        $di = SertaMerta::where('kategori_serta_merta', 'di')->get();
+        $search = $request->input('search');
+
+        if ($search) {
+            $di = SertaMerta::where('kategori_serta_merta', 'di')->where('judul_serta_merta', 'like', "%{$search}%")
+                // ->orWhere('keterangan_informasi_berkala', 'like', "%{$search}%")
+                ->get();
+        } else {
+            $di = SertaMerta::where('kategori_serta_merta', 'di')->get();
+        }
         return view('User.informasi.sertaMerta.di.index', compact('di'));
     }
     public function detailDi($id)

@@ -35,9 +35,8 @@
                         <div class="portfolio-info">
                             <h4>{{ $item->nama_kegiatan }}</h4>
                             <a href="/{{ $firstImage }}" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox preview-link" title="{{ $item->nama_kegiatan }}"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                    class="bx bx-link"></i></a>
+                                class="portfolio-lightbox preview-link" title="{{ $item->nama_kegiatan }}"><i
+                                    class="bx bx-plus"></i></a>
                         </div>
                     </div>
                 @endforeach

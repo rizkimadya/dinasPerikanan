@@ -129,7 +129,7 @@
                             <!--end:Menu sub-->
                         </div>
                         <div data-kt-menu-trigger="click"
-                            class="menu-item menu-accordion  {{ $title == 'Profil Pejabat' ? 'here show' : '' }} {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Visi Misi' ? 'here show' : '' }} {{ $title == 'Struktur Organisasi' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Visi Misi' ? 'here show' : '' }}">
+                            class="menu-item menu-accordion {{ $title == 'Maksud & Tujuan' ? 'here show' : '' }} {{ $title == 'Profil Pejabat' ? 'here show' : '' }} {{ $title == 'Profil Kami' ? 'here show' : '' }} {{ $title == 'Visi Misi' ? 'here show' : '' }} {{ $title == 'Struktur Organisasi' ? 'here show' : '' }} {{ $title == 'Tugas & Fungsi' ? 'here show' : '' }} {{ $title == 'Maklumat Pelayanan' ? 'here show' : '' }} {{ $title == 'Visi Misi' ? 'here show' : '' }}">
                             <!--begin:Menu link-->
                             <span class="menu-link">
                                 <span class="menu-icon">

@@ -21,10 +21,26 @@
                 <p> Dinas Kelautan & Perikanan Provinsi Sulawesi Selatan</p>
             </div>
 
+            <!-- Search Form -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <form action="{{ url('/profil-pejabat') }}/#pejabat" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Cari Profil Pejabat..."
+                                value="{{ request('search') }}">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Cari</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="row">
                 @foreach ($pejabat as $item)
-                    <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box">
+                    <div class="col-md-3 d-flex align-items-stretch mb-3 mb-md-4 mb-md-4 mb-3" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <div class="icon-box w-100">
                             <div class="icon"><i class="bx bx-user"></i></div>
                             <h4><a
                                     href="{{ asset('storage/profilPejabat/' . $item->profil_pdf) }}">{{ $item->nama_lengkap }}</a>

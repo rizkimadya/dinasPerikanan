@@ -23,7 +23,7 @@
 
             <div class="row">
                 @foreach ($pengumuman as $item)
-                    <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-md-4 d-flex align-items-stretch mb-3 mb-md-4" data-aos="zoom-in" data-aos-delay="200">
                         <a href="/pengumuman/detail/{{ $item->id }}">
                             <div class="icon-box">
                                 <div class="icon"><i class="bx bx-file"></i></div>

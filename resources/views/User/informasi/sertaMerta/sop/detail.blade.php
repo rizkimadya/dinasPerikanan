@@ -38,8 +38,8 @@
 
             <div class="row">
                 @foreach ($sopLain as $item)
-                    <div class="col-md-3 mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="card p-md-4 p-3 text-center">
+                    <div class="col-md-3 mb-3 mb-md-4 d-flex" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card p-md-4 p-3 text-center w-100">
                             <h4>{{ $item->judul_serta_merta }}</h4>
                             <p>{!! Str::limit($item->keterangan_serta_merta, 100) !!}</p>
                             <a href="/standar-operasional-prosedur/detail/{{ $item->id }}" class="btn text-light"

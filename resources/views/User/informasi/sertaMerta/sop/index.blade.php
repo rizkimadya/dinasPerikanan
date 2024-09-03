@@ -21,10 +21,25 @@
                 <p>Dinas Kelautan & Perikanan Provinsi Sulawesi Selatan</p>
             </div>
 
+            <!-- Search Form -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <form action="{{ url('/standar-operasional-prosedur') }}/#sop" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Cari Judul ..."
+                                value="{{ request('search') }}">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Cari</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="row">
                 @foreach ($sop as $item)
-                    <div class="col-md-3 mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="card p-md-4 p-3 text-center">
+                    <div class="col-md-3 mb-3 mb-md-4 d-flex" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card p-md-4 p-3 text-center w-100">
                             <h4>{{ $item->judul_serta_merta }}</h4>
                             <p>{!! Str::limit($item->keterangan_serta_merta, 100) !!}</p>
                             <a href="/standar-operasional-prosedur/detail/{{ $item->id }}" class="btn text-light"

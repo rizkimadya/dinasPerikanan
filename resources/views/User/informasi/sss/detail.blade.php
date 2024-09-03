@@ -39,8 +39,8 @@
 
             <div class="row">
                 @foreach ($sssLain as $item)
-                    <div class="col-md-3 mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="card p-md-4 p-3 text-center">
+                    <div class="col-md-3 mb-3 mb-md-4 d-flex" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card p-md-4 p-3 text-center w-100">
                             <h4>{{ $item->judul_sss }}</h4>
                             <p>{{ $item->kategori_sss }}</p>
                             <a href="/sedia-setiap-saat/detail/{{ $item->id }}" class="btn text-light"

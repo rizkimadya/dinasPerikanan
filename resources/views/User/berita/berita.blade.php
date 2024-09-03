@@ -21,21 +21,41 @@
                 <p>Informasi Seputan Dinas Kelautan & Perikanan Provinsi Sulawesi Selatan</p>
             </div>
 
+            <!-- Search Form -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <form action="{{ url('/berita') }}/#berita" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Cari berita..." value="{{ request('search') }}">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Cari</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="row">
-                @foreach ($berita as $item)
-                    <div class="col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <a href="/berita/detail/{{ $item->id }}" class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('storage/fileBerita/' . $item->gambar) }}" class="img-fluid"
-                                    alt="{{ $item->judul }}">
-                            </div>
-                            <div class="member-info">
-                                <h4>{{ $item->judul }}</h4>
-                                <span>{!! Str::limit($item->deskripsi, 64) !!}</span>
-                            </div>
-                        </a>
+                @if($berita->count())
+                    @foreach ($berita as $item)
+                        <div class="col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                            <a href="/berita/detail/{{ $item->id }}" class="member">
+                                <div class="member-img">
+                                    <img src="{{ asset('storage/fileBerita/' . $item->gambar) }}" class="img-fluid"
+                                        alt="{{ $item->judul }}">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $item->judul }}</h4>
+                                    <span>{!! Str::limit($item->deskripsi, 64) !!}</span>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-md-12">
+                        <p class="text-center">Berita tidak ditemukan.</p>
                     </div>
-                @endforeach
+                @endif
             </div>
         </div>
     </section><!-- End Team Section -->
